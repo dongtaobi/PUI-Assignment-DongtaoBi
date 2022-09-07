@@ -1,3 +1,7 @@
+.header_content {
+    text-decoration: none;
+}
+
 .page_title_primary {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -20,6 +24,20 @@
     font-size: 20px;
     font-style: normal;
     text-decoration: none;
+}
+
+.page_header_links a{
+    text-decoration: none;
+}
+
+
+.page_declaration{
+    margin-top: 80px;
+    tab-size: 30px;
+    margin-bottom: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-style: italic;
 }
 
 
@@ -47,6 +65,7 @@
     border-style:ridge;
     border-width: 0px;
     border-color: darkgrey;
+    text-decoration: none;
 }
 
 .post_product_tab {
@@ -55,19 +74,55 @@
     padding-left: 1%;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
+    width: 18%;
+    text-decoration: none;
+}
+
+.post_product_tab a{
+    text-decoration: none;
+}
+
+.post_product_tab_large {
+    padding: 15px;
+    padding-right: 1%; 
+    padding-left: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-decoration: none;
+}
+
+.post_product_tab_large a{
+    text-decoration: none;
+}
+
+.post_product_tab_thumb {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    text-decoration: none;
 }
 
 .post_productimage_thumb {
-    margin-left:auto;
+    width: 100%;
+    margin-left:5px;
     margin-right:auto;
     margin-top: 20px;
-    width: 320px;
     margin-bottom: 0px;
     border-width: 1px;
     border-style: outset;
-    border-color:black;
-    border-radius: 10px;
+    border-color:black;;
+    text-decoration: none;
+}
+
+.post_productimage_enlarged {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 0px;
+    text-decoration: none;
 }
 
 .post_product_name {
@@ -88,10 +143,19 @@
 }
 
 
-
-h1
-h2
-h3
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
+.selection_label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 25px;
 }
+
+.button_addcart {
+    margin-left: 15px;
+}
+
+.tab_addcart {
+    margin-top: 25px;
+}
+
+

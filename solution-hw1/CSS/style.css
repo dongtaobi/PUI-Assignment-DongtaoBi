@@ -27,6 +27,7 @@
 }
 
 .page_header_links a{
+    color: black;
     text-decoration: none;
 }
 
@@ -156,7 +157,7 @@
 .post_product_desciption {
     font-size: 15px;
     font-style: Serif;
-    text-decoration:none;
+    color: black;
     margin-top: 5px;
     margin-left: 2px;
     margin-bottom:35px;
@@ -244,6 +245,7 @@
 }
 
 .post_shoppingcart_product_desrpt {
+    color: black;
     line-height: 7px;
 }
 

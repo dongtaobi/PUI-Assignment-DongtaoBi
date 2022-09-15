@@ -1,13 +1,13 @@
 
 
 
-/* comment to be added */
+/* body level 0 style definitions */
 .bd_l0_body {
     width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    background-color:beige;  
+    background-color:white;  
     gap: 5px;
     align-content: center;
 
@@ -15,7 +15,10 @@
     font-style: black;
 }
 
-/* comment to be added */
+
+
+
+/* body level 1 style definitions */
 .bd_l1_header_block {
     display: flex;
     margin: 10px;
@@ -23,32 +26,33 @@
     flex-direction: row;
     align-content: top;
     width: auto;
-    height: 300px;
-    background-color: yellow;
+    height: 220px;
+    background-color: white;
     gap: 0px;
 }
 
 .bd_l1_content_block {
     display: flex;
-    margin: 10px;
+    margin: 0px;
+    margin-top: 40px;
     flex-direction: row;
     align-content: top;
     width: auto;
     height: 1200px;
-    background-color: yellow;
-    gap: 0px;
+    background-color: white;
+    gap: 15px;
 }
 
 
 
 
-/* comment to be added */
+/* body level 2 style definitions */
 .bd_l2_branding_graphic {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    flex: 4;
-    background-color: orange;
+    flex: 1.8;
+    background-color: white;
     gap:10px;
 }
 
@@ -58,25 +62,27 @@
     flex-direction: column;
     flex: 5;
     align-content: center;
-    background-color: orange;
+    background-color: white;
     gap:10px;
 }
 
 .bd_l2_content_block_col {
     flex: 1;
     margin: 10px;
-    background-color: orange;
+    background-color: white;
 }
 
 
 
-/* comment to be added */
+
+
+/* body level 3 style definitions */
 .bd_l3_branding_logo {
     margin: 10px;
     flex: 1;
     height: 90%;
     width: auto;
-    background-color: magenta
+    background-color: white
 }
 
 
@@ -86,16 +92,15 @@
     gap: 15px;
     flex: 2.5;
     width: 100%;
-    background-color: magenta;
+    background-color: white;
     align-self: center;
     
 }
 
 .bd_l3_border_box {
     flex: 3;
-
     width: 100%;
-    background-color: magenta; 
+    background-color: white; 
     border-top: 4px solid black;
     align-self: center;
 }
@@ -107,9 +112,8 @@
     width: auto;   
     margin-left: 0px;
     align-items: center;
-    
     font-size: 18px;
-    background-color: magenta;
+    background-color: white;
     
 }
 
@@ -119,15 +123,22 @@
     flex-direction: column;
     gap: 10px;
     margin: 10px;
-    height: 48%;
+    height: 40%;
     width: auto;
-    background-color: magenta;
+    background-color: white;
     align-content: center;
     align-items: left;
 }
 
+.bd_l3_content_block_item:hover{
+    background-color: rgb(230, 220, 180);
+    
+}
 
-/* comment to be added */
+
+
+
+/* body level 4 style definitions */
 .bd_l4_link_list_text {
     margin: 15px;
     height: 16px;
@@ -136,7 +147,8 @@
     align-self: center;
     text-align: center;
     flex: 1;
-    background-color: violet;
+    background-color: white;
+    font-style: bold;
 }
 
 .bd_l4_page_subtitle_text {
@@ -146,24 +158,35 @@
     padding: 5px;
     align-self: center;
     flex: 1;
-    background-color: violet;
+    background-color: white;
+    font-style: bold;
 }
 
 
 
 .bd_l4_content_block_item_cont {
-    background-color: violet;
-    margin: 0px;
     height: auto;
     width: auto;
 }
 
-.bd_l5_content_block_item_pic {
-    margin: 10px;
-    width: 94%;
 
-    background-color: violet;
-    
-    align-self: center;
-    align-items: center;
+/* body level 5 style definitions */
+.bd_l5_content_block_item_pic { 
+    width: 94%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.bd_l5_content_block_item_name {
+    font-size: 18px;
+    margin: 3px;
+    margin-left: 10px;
+}
+
+.bd_l5_content_block_item_price {
+    font-size: 18px;
+    margin: 3px;
+    margin-left: 10px;
 }

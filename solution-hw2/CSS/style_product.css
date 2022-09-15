@@ -1,0 +1,185 @@
+
+
+
+/* comment to be added */
+.bd_l0_body {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color:white;  
+    gap: 5px;
+    align-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: black;
+}
+
+/* comment to be added */
+.bd_l1_header_block {
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-content: top;
+    width: auto;
+    height: 220px;
+    background-color: white;
+    gap: 0px;
+}
+
+.bd_l1_content_block {
+    display: flex;
+    margin: 0px;
+    margin-top: 40px;
+    flex-direction: row;
+    align-content: top;
+    width: auto;
+    height: 1200px;
+    background-color: white;
+    gap: 15px;
+}
+
+
+
+
+/* comment to be added */
+.bd_l2_branding_graphic {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1.8;
+    background-color: white;
+    gap:10px;
+}
+
+.bd_l2_dir_bar {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    align-content: center;
+    background-color: white;
+    gap:10px;
+}
+
+.bd_l2_content_block_col {
+    flex: 1;
+    margin: 10px;
+    background-color: white;
+}
+
+
+
+/* comment to be added */
+.bd_l3_branding_logo {
+    margin: 10px;
+    flex: 1;
+    height: 90%;
+    width: auto;
+    background-color: white
+}
+
+
+.bd_l3_link_list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex: 2.5;
+    width: 100%;
+    background-color: white;
+    align-self: center;
+    
+}
+
+.bd_l3_border_box {
+    flex: 3;
+    width: 100%;
+    background-color: white; 
+    border-top: 4px solid black;
+    align-self: center;
+}
+
+
+
+.bd_l3_page_subtitle {
+    flex: 1.5;
+    width: auto;   
+    margin-left: 0px;
+    align-items: center;
+    font-size: 18px;
+    background-color: white;
+    
+}
+
+.bd_l3_content_block_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    height: 40%;
+    width: auto;
+    background-color: white;
+    align-content: center;
+    align-items: left;
+}
+
+.bd_l3_content_block_item:hover{
+    background-color: rgb(230, 220, 180);
+    
+}
+
+
+/* comment to be added */
+.bd_l4_link_list_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    align-self: center;
+    text-align: center;
+    flex: 1;
+    background-color: white;
+    font-style: bold;
+}
+
+.bd_l4_page_subtitle_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    align-self: center;
+    flex: 1;
+    background-color: white;
+    font-style: bold;
+}
+
+
+
+.bd_l4_content_block_item_cont {
+    height: auto;
+    width: auto;
+}
+
+
+/* comment to be added */
+.bd_l5_content_block_item_pic { 
+    width: 94%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.bd_l5_content_block_item_name {
+    font-size: 18px;
+    margin: 3px;
+    margin-left: 10px;
+}
+
+.bd_l5_content_block_item_price {
+    font-size: 18px;
+    margin: 3px;
+    margin-left: 10px;
+}

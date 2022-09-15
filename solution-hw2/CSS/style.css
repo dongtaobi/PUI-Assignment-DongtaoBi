@@ -1,0 +1,169 @@
+
+
+
+/* comment to be added */
+.bd_l0_body {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color:beige;  
+    gap: 5px;
+    align-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: black;
+}
+
+/* comment to be added */
+.bd_l1_header_block {
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-content: top;
+    width: auto;
+    height: 300px;
+    background-color: yellow;
+    gap: 0px;
+}
+
+.bd_l1_content_block {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    align-content: top;
+    width: auto;
+    height: 1200px;
+    background-color: yellow;
+    gap: 0px;
+}
+
+
+
+
+/* comment to be added */
+.bd_l2_branding_graphic {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    background-color: orange;
+    gap:10px;
+}
+
+.bd_l2_dir_bar {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    align-content: center;
+    background-color: orange;
+    gap:10px;
+}
+
+.bd_l2_content_block_col {
+    flex: 1;
+    margin: 10px;
+    background-color: orange;
+}
+
+
+
+/* comment to be added */
+.bd_l3_branding_logo {
+    margin: 10px;
+    flex: 1;
+    height: 90%;
+    width: auto;
+    background-color: magenta
+}
+
+
+.bd_l3_link_list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex: 2.5;
+    width: 100%;
+    background-color: magenta;
+    align-self: center;
+    
+}
+
+.bd_l3_border_box {
+    flex: 3;
+
+    width: 100%;
+    background-color: magenta; 
+    border-top: 4px solid black;
+    align-self: center;
+}
+
+
+
+.bd_l3_page_subtitle {
+    flex: 1.5;
+    width: auto;   
+    margin-left: 0px;
+    align-items: center;
+    
+    font-size: 18px;
+    background-color: magenta;
+    
+}
+
+.bd_l3_content_block_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    height: 48%;
+    width: auto;
+    background-color: magenta;
+    align-content: center;
+    align-items: left;
+}
+
+
+/* comment to be added */
+.bd_l4_link_list_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    align-self: center;
+    text-align: center;
+    flex: 1;
+    background-color: violet;
+}
+
+.bd_l4_page_subtitle_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    align-self: center;
+    flex: 1;
+    background-color: violet;
+}
+
+
+
+.bd_l4_content_block_item_cont {
+    background-color: violet;
+    margin: 0px;
+    height: auto;
+    width: auto;
+}
+
+.bd_l5_content_block_item_pic {
+    margin: 10px;
+    width: 94%;
+
+    background-color: violet;
+    
+    align-self: center;
+    align-items: center;
+}

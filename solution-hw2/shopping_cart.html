@@ -1,114 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- Universal header block, only change page title as needed -->
-  <head class="header_content">
+  <head>
+    <link rel="stylesheet" href="CSS/style_cart.css">
     <meta charset="UTF-8">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <h1 class = "page_title_primary"> Shopping Cart </h1>
-    <hr class = "page_header_line_1">
-    <a href="./index.html">
+    <title>Shopping Cart</title>
+  </head>
 
-     <img class = "page_top_branding" src = "links/logo-01.svg"  alt="image loading.."> 
-    </a>
-     <hr class = "page_header_line_2">
+  <!-- page body begins here -->
+  <body class="bd_l0_body"> 
+    
+    <div class="bd_l1_header_block">
 
-    <!-- Header text link for shopping cart and main products page -->
-    <div class = "page_header_links">
-      <a href="./index.html">
-        <h4>Products</h4>
+      <a href="./index.html" class = "bd_l2_branding_graphic" >
+        <img class="bd_l3_branding_logo" src="links/logo-01.svg" alt="bun bun branding logo">
       </a>
-      <a href="./shopping_cart.html">
-        <h4>Shopping Cart</h4>
-      </a>
-    </div>
+      
+      
+      <div class = "bd_l2_dir_bar"> 
+
+        <div class = "bd_l3_link_list"> 
+          <div class = "bd_l4_link_list_text"> </div>
+          <div class = "bd_l4_link_list_text"> </div>
+          <a class = "bd_l4_link_list_text" href="./index.html">PRODUCTS</a>
+          <a class = "bd_l4_link_list_text" href="./shopping_cart.html">CART</a>
+        </div>
+        <div class = "bd_l3_border_box"> </div>
+
+        <div class = "bd_l3_page_subtitle">
+          <div class = "bd_l4_page_subtitle_text"> Shopping Cart  </div> 
+        </div>
+      </div>  
+      
+    </div >
+
 
     <!-- page body begins here -->
-  <body>
+  
     <div class="post_body">
 
-      <!-- Page secondary title/comment area for advertisement -->
-      <div class="page_declaration">
-        <p>Product Shopping Cart</p>
-      </div>
-
       <!--Designated area for displaying products in shopping cart-->
-      <div class="post_shoppingcart_tab">
+      <div class = "bd_l1_content_block">
 
-        <!-- individual product tab: original cinnamon roll -->
-        <div id = "original-cinnamon-roll" class="post_shoppingcart_tab_item">
-          <a href="./product_original_cinnamon_roll.html">
-            <div class="post_shoppingcart_product_thumb">  
-              <img class="img_shoppingcart_thumb" src="links/original-cinnamon-roll.jpg" alt="image loading..">
+        <div class = "bd_l2_content_block_left">
 
-              <div class="post_shoppingcart_product_desrpt">
-                <p> Original Cinnamon Roll </p>
-                <p> Glazing: Keep Original </p>
-                <p> Pack Size: 1 </p>
-              </div>
-             </div>        
-          </a>
-
-          <div class="post_shoppingcart_product_price">
-            <p> $2.49 </p>
-          </div>
+          
         </div>
-
-        <!-- individual product tab: gluten free cinnamon roll -->
-        <div id = "gluten-free-cinnamon-roll" class="post_shoppingcart_tab_item">
-          <a href="./product_original_cinnamon_roll.html">
-            <div class="post_shoppingcart_product_thumb">  
-              <img class="img_shoppingcart_thumb" src="links/gluten-free-cinnamon-roll.jpg" alt="image loading..">
-
-              <div class="post_shoppingcart_product_desrpt">
-                <p> Original Cinnamon Roll </p>
-                <p> Glazing: Sugar Milk </p>
-                <p> Pack Size: 6 </p>
-              </div>
-             </div>        
-          </a>
-
-          <div class="post_shoppingcart_product_price">
-            <p> $27.49 </p>
+        <!--First item in check out list -->
+        <div class = "bd_l2_content_block_right">
+          <div class = "bd_l3_cart_item_block">
+            <div class = "bd_l4_right_item_left">
+              <a href="./product_original_cinnamon_roll.html" 
+              class = "bd_l4_content_block_item_cont">
+                <img class="bd_l5_content_block_item_pic" 
+                src="links/original-cinnamon-roll.jpg" 
+                alt="image loading..">
+              </a>
+            </div>
+            <div class = "bd_l4_right_item_middle">
+              <p> Original Cinnamon Roll </p>
+              <p> Glazing : Keep Original</p>
+              <p> Pack Size : 1</p>
+            </div>
+            <div class = "bd_l4_right_item_right">
+              <p> $2.49</p>
+            </div>
           </div>
-        </div>
-
-        <!-- individual product tab: walnut cinnamon roll -->
-        <div id = "walnut-cinnamon-roll" class="post_shoppingcart_tab_item">
-          <a href="./product_original_cinnamon_roll.html">
-            <div class="post_shoppingcart_product_thumb">  
-              <img class="img_shoppingcart_thumb" src="links/walnut-cinnamon-roll.jpg" alt="image loading..">
-
-              <div class="post_shoppingcart_product_desrpt">
-                <p> Original Cinnamon Roll </p>
-                <p> Glazing: Sugar Milk </p>
-                <p> Pack Size: 6 </p>
-              </div>
-             </div>        
-          </a>
-
-          <div class="post_shoppingcart_product_price">
-            <p> $28.49 </p>
+          
+          <!-- Remove item key -->
+          <div class="bd_l3_buttom_remove">
+            Remove Item
           </div>
-        </div>
-        <div class="page_footer_line_1"> </div>
 
-      
+          <!--Second item in check out list -->
+          <div class = "bd_l3_cart_item_block">
+            <div class = "bd_l4_right_item_left">
+              <a href="./product_original_cinnamon_roll.html" 
+              class = "bd_l4_content_block_item_cont">
+                <img class="bd_l5_content_block_item_pic" 
+                src="links/double-chocolate-cinnamon-roll.jpg" 
+                alt="image loading..">
+              </a>
+            </div>
+            <div class = "bd_l4_right_item_middle">
+              <p> Double Chocolate Cinnamon Roll </p>
+              <p> Glazing : Sugar Milk</p>
+              <p> Pack Size : 6</p>
+            </div>
+            <div class = "bd_l4_right_item_right">
+              <p> $27.45 </p>
+            </div>
+          </div>
 
+          <!-- Remove item key -->
+          <div class="bd_l3_buttom_remove">
+            Remove Item
+          </div>
+          
+          <div class = "bd_l3_cart_div_line"> </div>
+
+          <div class = "bd_l3_cart_item_total">
+              <div class = "bd_l4_right_item_left">
+              </div>
+              <div class = "bd_l4_right_item_middle">
+                <p> Total :</p>
+              </div>
+              <div class = "bd_l4_right_item_right">
+                <p> $58.47 </p>
+              </div>
+          </div>
+          
         <!-- Display feature for total price and checkout button -->
-        <div class="post_shoppingcart_product_price">
-          <p> Total : $58.47 </p>
-        </div>
-        
-        <div class="tab_addcart">
-          <button class="button_addcart">
-            Checkout  
-          </button>
-        </div>
-      </div>
-  </div>
-</body>
+          <div class = "bd_l3_cart_buttom">
+            <button class="bd_l4_cart_buttom_checkout">
+              Checkout  
+            </button>
+          </div>
 
+        </div>
+
+      </div>
+    </div>
+  </body>
 </html>
 

@@ -10,9 +10,9 @@
     background-color:white;  
     gap: 5px;
     align-content: center;
-
     font-family: Arial, Helvetica, sans-serif;
-    font-style: black;
+    letter-spacing: 1px;
+    font-size: 18px;
 }
 
 
@@ -24,10 +24,9 @@
     margin: 10px;
     box-sizing: border-box;
     flex-direction: row;
-    align-content: top;
     width: auto;
     height: 220px;
-    background-color: white;
+    text-align: right;background-color: white;
     gap: 0px;
 }
 
@@ -36,11 +35,10 @@
     margin: 0px;
     margin-top: 40px;
     flex-direction: row;
-    align-content: top;
-    width: auto;
-    height: 1200px;
+    width: 1200px;
+    height: auto;
     background-color: white;
-    gap: 15px;
+    gap: 0px;
 }
 
 
@@ -66,11 +64,24 @@
     gap:10px;
 }
 
-.bd_l2_content_block_col {
+.bd_l2_content_block_left {
     flex: 1;
     margin: 10px;
     background-color: white;
 }
+
+.bd_l2_content_block_right {
+    flex: 2.5;
+
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+
+    margin: 10px;
+    background-color: white;
+    
+}
+
 
 
 
@@ -85,7 +96,6 @@
     background-color: white
 }
 
-
 .bd_l3_link_list {
     display: flex;
     flex-direction: row;
@@ -94,7 +104,6 @@
     width: 100%;
     background-color: white;
     align-self: center;
-    
 }
 
 .bd_l3_border_box {
@@ -105,35 +114,69 @@
     align-self: center;
 }
 
-
-
 .bd_l3_page_subtitle {
     flex: 1.5;
     width: auto;   
-    margin-left: 0px;
-    align-items: center;
+    margin-left: -20px;
     font-size: 18px;
     background-color: white;
-    
-}
-
-.bd_l3_content_block_item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px;
-    height: 40%;
-    width: auto;
-    background-color: white;
-    align-content: center;
-    align-items: left;
 }
 
 .bd_l3_content_block_item:hover{
     background-color: rgb(230, 220, 180);
-    
 }
+
+.bd_l3_buttom_remove {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    height: auto;
+    background-color: white;
+}
+
+
+
+.bd_l3_cart_item_block {
+
+    background-color:white;
+    margin: 10px;
+    height: 130px;
+
+
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bd_l3_cart_div_line {
+    flex: 1;
+    background-color:white;
+    margin: 10px;
+    height: 200px;
+    border-top: 3px black solid;
+}
+
+.bd_l3_cart_item_total {
+    background-color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: right;
+    height: auto;
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bd_l3_cart_buttom {
+    background-color:white;
+    margin: 10px;
+    text-align: right;
+}
+
 
 
 
@@ -148,7 +191,10 @@
     text-align: center;
     flex: 1;
     background-color: white;
-    font-style: bold;
+}
+
+.bd_l4_link_list_text:link{
+    text-decoration: none;
 }
 
 .bd_l4_page_subtitle_text {
@@ -156,37 +202,52 @@
     height: 16px;
     width: auto;
     padding: 5px;
-    align-self: center;
+    text-align: left;
     flex: 1;
     background-color: white;
-    font-style: bold;
+    font-size: 22px;
 }
 
 
+.bd_l4_cart_buttom_checkout {
+    height: 32px;
+    width: 160px;
+    font-size: 18px;
+    margin-right: 60px;
+}
 
-.bd_l4_content_block_item_cont {
-    height: auto;
-    width: auto;
+
+.bd_l4_cart_buttom_checkout:hover {
+    background-color: yellow;
+}
+
+
+.bd_l4_right_item_left {
+    flex: 1;
+    background-color: white;
+}
+
+.bd_l4_right_item_middle {
+    flex: 2.5;
+    text-align: left;
+    background-color: white;
+}
+
+.bd_l4_right_item_right {
+    flex: 1;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+
+    display: flex;
 }
 
 
 /* body level 5 style definitions */
-.bd_l5_content_block_item_pic { 
-    width: 94%;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
+
+.bd_l5_content_block_item_pic{
+    height: 96%;
+    align-self: center;
     border: 2px solid black;
-}
-
-.bd_l5_content_block_item_name {
-    font-size: 18px;
-    margin: 3px;
-    margin-left: 10px;
-}
-
-.bd_l5_content_block_item_price {
-    font-size: 18px;
-    margin: 3px;
-    margin-left: 10px;
 }

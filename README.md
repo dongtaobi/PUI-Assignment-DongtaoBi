@@ -1,6 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: `https://dongtaobi.github.io/PUI-Assignment-DongtaoBi/solution-hw2/https://dongtaobi.github.io/PUI-Assignment-DongtaoBi/solution-hw2/`
 
-Repository link: `add the URL to this repository`
-https://dongtaobi.github.io/PUI-Assignment-DongtaoBi/solution-hw2/
+Repository link: `https://github.com/dongtaobi/PUI-Assignment-DongtaoBi`

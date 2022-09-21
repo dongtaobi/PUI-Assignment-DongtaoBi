@@ -1,0 +1,253 @@
+
+
+
+/* body level 0 style definitions */
+.bd_l0_body {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color:white;  
+    gap: 5px;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+
+
+
+/* body level 1 style definitions */
+.bd_l1_header_block {
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: auto;
+    height: 220px;
+    text-align: right;background-color: white;
+    gap: 0px;
+}
+
+.bd_l1_content_block {
+    display: flex;
+    margin: 0px;
+    margin-top: 40px;
+    flex-direction: row;
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    gap: 0px;
+}
+
+
+
+
+/* body level 2 style definitions */
+.bd_l2_branding_graphic {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1.8;
+    background-color: white;
+    gap:10px;
+}
+
+.bd_l2_dir_bar {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    align-content: center;
+    background-color: white;
+    gap:10px;
+}
+
+.bd_l2_content_block_left {
+    flex: 1;
+    margin: 10px;
+    background-color: white;
+}
+
+.bd_l2_content_block_right {
+    flex: 2.5;
+
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+
+    margin: 10px;
+    background-color: white;
+    
+}
+
+
+
+
+
+
+/* body level 3 style definitions */
+.bd_l3_branding_logo {
+    margin: 10px;
+    flex: 1;
+    height: 90%;
+    width: auto;
+    background-color: white
+}
+
+.bd_l3_link_list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex: 2.5;
+    width: 100%;
+    background-color: white;
+    align-self: center;
+}
+
+.bd_l3_border_box {
+    flex: 3;
+    width: 100%;
+    background-color: white; 
+    border-top: 4px solid black;
+    align-self: center;
+}
+
+.bd_l3_page_subtitle {
+    flex: 1.5;
+    width: auto;   
+    margin-left: -20px;
+    font-size: 18px;
+    background-color: white;
+}
+
+.bd_l3_content_block_item:hover{
+    background-color: rgb(230, 220, 180);
+}
+
+.bd_l3_buttom_remove {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    height: auto;
+    background-color: white;
+}
+
+
+
+.bd_l3_cart_item_block {
+
+    background-color:white;
+    margin: 10px;
+    height: 130px;
+
+
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bd_l3_cart_div_line {
+    flex: 1;
+    background-color:white;
+    margin: 10px;
+    height: 200px;
+    border-top: 3px black solid;
+}
+
+.bd_l3_cart_item_total {
+    background-color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: right;
+    height: auto;
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bd_l3_cart_buttom {
+    background-color:white;
+    margin: 10px;
+    text-align: right;
+}
+
+
+
+
+
+/* body level 4 style definitions */
+.bd_l4_link_list_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    align-self: center;
+    text-align: center;
+    flex: 1;
+    background-color: white;
+}
+
+.bd_l4_link_list_text:link{
+    text-decoration: none;
+}
+
+.bd_l4_page_subtitle_text {
+    margin: 15px;
+    height: 16px;
+    width: auto;
+    padding: 5px;
+    text-align: left;
+    flex: 1;
+    background-color: white;
+    font-size: 22px;
+}
+
+
+.bd_l4_cart_buttom_checkout {
+    height: 32px;
+    width: 160px;
+    font-size: 18px;
+    margin-right: 60px;
+}
+
+
+.bd_l4_cart_buttom_checkout:hover {
+    background-color: yellow;
+}
+
+
+.bd_l4_right_item_left {
+    flex: 1;
+    background-color: white;
+}
+
+.bd_l4_right_item_middle {
+    flex: 2.5;
+    text-align: left;
+    background-color: white;
+}
+
+.bd_l4_right_item_right {
+    flex: 1;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+
+    display: flex;
+}
+
+
+/* body level 5 style definitions */
+
+.bd_l5_content_block_item_pic{
+    height: 96%;
+    align-self: center;
+    border: 2px solid black;
+}

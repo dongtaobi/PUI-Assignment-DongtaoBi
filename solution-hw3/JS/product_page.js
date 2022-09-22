@@ -3,18 +3,21 @@
 console.log('Javascript file is successfully linked!')
 
 
-let selectGlazing = document.querySelector('#glazing_Select');
+
 // Give it a listener for the 'change' event, which is a function that will run
 // when the selected option changes. You could also do this by setting the
 // onchange property of selectElement, e.g. selectElement.onchange = ...
+
+let selectGlazing = document.querySelector('#glazing_Select');
 selectGlazing.addEventListener('change', function () { cal_TotalPrice("upd_Glazing");});
 
+
 let selectPackSize = document.querySelector('#packsize_Select');
-//selectPackSize.addEventListener('change', onSelect_PackSizeOptionChange);
 selectPackSize.addEventListener('change', function () { cal_TotalPrice("upd_PackSize");});
 
-//let selectPrefer = document.querySelector('#packsize_Select','#glazing_Select');
-//selectPrefer.addEventListener('change', onSelect_TotalPriceChange);
+//Old code:
+//let selectPackSize = document.querySelector('#packsize_Select','#glazing_Select');
+//selectPackSize.addEventListener('change', onSelect_PackSizeOptionChange);
 
 
 
@@ -78,19 +81,20 @@ let allPackSizeOptions = [
     },
 ];
 
-item_GlazingChange(allGlazingOptions[0])
-item_PackSizeChange(allPackSizeOptions[0])
 
+
+
+//update glazing selection to DOM to return individual item price (base + glazing)
 function item_GlazingChange(item) {
-    // get value of selected glazing option
     console.log('Glazing option is updated!');
     let price_SingleItem = '$' + (item.base_price + item.add_price);
     console.log('Current single item price is ' + price_SingleItem)
     return price_SingleItem
 }
 
+
+//update packsize selection to DOM to return price adaption factor
 function item_PackSizeChange(item) {
-    // get value of selected glazing option
     let item_TotalPrice = document.querySelector('#item_baseprice');
     console.log('Pack Size Option is updated!');
     let price_Factor = item.price_adaption
@@ -98,7 +102,12 @@ function item_PackSizeChange(item) {
     return price_Factor
 }
 
+item_GlazingChange(allGlazingOptions[0])
+item_PackSizeChange(allPackSizeOptions[0])
+
+//on-change function to trigger preferences updates and calculate new total price
 function cal_TotalPrice(operation) {
+    console.log('onselect triggerred!')
     if (operation === "upd_Glazing") {  
         console.log('You selected flavor option number ' + this.value);
         let index_glazing = parseInt(this.value);
@@ -120,40 +129,39 @@ function cal_TotalPrice(operation) {
 }
 
 
+// To be add:
+// Code to update total price in product detail page based on selection
 
 
-
-function onSelect_GlazingOptionChange() {
+//Old code: 
+//function onSelect_GlazingOptionChange() {
     // In this function, `this` corresponds to the select
     // element. So `this.value` will contain the value of the
     // selected option as a string.
-    console.log('You selected flavor option number ' + this.value);
+    //console.log('You selected flavor option number ' + this.value);
   
     // We need to convert the string value to an integer
-    let index_glazing = parseInt(this.value);
+    //let index_glazing = parseInt(this.value);
   
     // Now retrieve the object at the index specified by the select's value
-    let glazingOption = allGlazingOptions[index_glazing];
+    //let glazingOption = allGlazingOptions[index_glazing];
   
     // Update the UI
-    item_GlazingChange(glazingOption);
-}
+    //item_GlazingChange(glazingOption);
+//}
 
 
-
-
-
-function onSelect_PackSizeOptionChange() {
-    console.log('You selected pack size option number ' + this.value);
+//function onSelect_PackSizeOptionChange() {
+    //console.log('You selected pack size option number ' + this.value);
     // We need to convert the string value to an integer
-    let index_packsize = parseInt(this.value);
+    //let index_packsize = parseInt(this.value);
   
     // Now retrieve the object at the index specified by the select's value
-    let packSizeOption = allPackSizeOptions[index_packsize];
+    //let packSizeOption = allPackSizeOptions[index_packsize];
   
     // Update the UI
-    item_PackSizeChange(packSizeOption);
-}
+    //item_PackSizeChange(packSizeOption);
+//}
 
 
 

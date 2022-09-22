@@ -7,10 +7,11 @@ let selectGlazing = document.querySelector('#glazing_Select');
 // Give it a listener for the 'change' event, which is a function that will run
 // when the selected option changes. You could also do this by setting the
 // onchange property of selectElement, e.g. selectElement.onchange = ...
-selectGlazing.addEventListener('change', onSelect_GlazingOptionChange);
+selectGlazing.addEventListener('change', function () { cal_TotalPrice("upd_Glazing");});
 
 let selectPackSize = document.querySelector('#packsize_Select');
-selectPackSize.addEventListener('change', onSelect_PackSizeOptionChange);
+//selectPackSize.addEventListener('change', onSelect_PackSizeOptionChange);
+selectPackSize.addEventListener('change', function () { cal_TotalPrice("upd_PackSize");});
 
 //let selectPrefer = document.querySelector('#packsize_Select','#glazing_Select');
 //selectPrefer.addEventListener('change', onSelect_TotalPriceChange);
@@ -80,15 +81,6 @@ let allPackSizeOptions = [
 item_GlazingChange(allGlazingOptions[0])
 item_PackSizeChange(allPackSizeOptions[0])
 
-//function cal_TotalPrice() {
-    //let price_Total = price_SingleItem * price_Factor;
-    //console.log('Current total price is ' + price_Total)
-    //add your code to do update the price ...;
-    //return price_Total
-//}
-
-
-
 function item_GlazingChange(item) {
     // get value of selected glazing option
     console.log('Glazing option is updated!');
@@ -96,6 +88,40 @@ function item_GlazingChange(item) {
     console.log('Current single item price is ' + price_SingleItem)
     return price_SingleItem
 }
+
+function item_PackSizeChange(item) {
+    // get value of selected glazing option
+    let item_TotalPrice = document.querySelector('#item_baseprice');
+    console.log('Pack Size Option is updated!');
+    let price_Factor = item.price_adaption
+    console.log('Current price factor is ' + price_Factor);
+    return price_Factor
+}
+
+function cal_TotalPrice(operation) {
+    if (operation === "upd_Glazing") {  
+        console.log('You selected flavor option number ' + this.value);
+        let index_glazing = parseInt(this.value);
+        let glazingOption = allGlazingOptions[index_glazing];
+        item_GlazingChange(glazingOption);
+    }
+
+
+    else if (operation === "upd_PackSize") {        
+        console.log('You selected pack size option number ' + this.value);
+        let index_packsize = parseInt(this.value);
+        let packSizeOption = allPackSizeOptions[index_packsize];
+        item_PackSizeChange(packSizeOption);
+    }
+
+    let price_Total = price_SingleItem * price_Factor;
+    console.log('Current total price is ' + price_Total)
+    return price_Total
+}
+
+
+
+
 
 function onSelect_GlazingOptionChange() {
     // In this function, `this` corresponds to the select
@@ -114,16 +140,7 @@ function onSelect_GlazingOptionChange() {
 }
 
 
-function item_PackSizeChange(item) {
-    // get value of selected glazing option
-    let item_TotalPrice = document.querySelector('#item_baseprice');
-    console.log('Pack Size Option is updated!');
-    let price_Factor = item.price_adaption
-    console.log('Current price factor is ' + price_Factor);
-    cal_TotalPrice()
-    return price_Factor
-  // add your code to do update the price ...;
-}
+
 
 
 function onSelect_PackSizeOptionChange() {

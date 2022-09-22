@@ -77,15 +77,23 @@ let allPackSizeOptions = [
     },
 ];
 
-item_GlazingChange(allGlazingOptions[1])
+item_GlazingChange(allGlazingOptions[0])
+item_PackSizeChange(allPackSizeOptions[0])
+
+//function cal_TotalPrice() {
+    //let price_Total = price_SingleItem * price_Factor;
+    //console.log('Current total price is ' + price_Total)
+    //add your code to do update the price ...;
+    //return price_Total
+//}
+
+
 
 function item_GlazingChange(item) {
     // get value of selected glazing option
-    let item_IndivPrice = document.querySelector('#item_baseprice');
     console.log('Glazing option is updated!');
     let price_SingleItem = '$' + (item.base_price + item.add_price);
     console.log('Current single item price is ' + price_SingleItem)
-  // add your code to do update the price ...;
     return price_SingleItem
 }
 
@@ -112,6 +120,7 @@ function item_PackSizeChange(item) {
     console.log('Pack Size Option is updated!');
     let price_Factor = item.price_adaption
     console.log('Current price factor is ' + price_Factor);
+    cal_TotalPrice()
     return price_Factor
   // add your code to do update the price ...;
 }
@@ -130,7 +139,6 @@ function onSelect_PackSizeOptionChange() {
 }
 
 
-let updated_Price = item_GlazingChange(item) * item_PackSizeChange(item)
 
 
 

@@ -1,3 +1,14 @@
+/* remove link text color */
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#000000; 
+    text-decoration:none; 
+}
 
 
 
@@ -198,13 +209,12 @@
     text-align: center;
 }
 
+
+
 .bd_l4_button_addcart:hover {
     background-color: yellow;
 }
 
-.bd_l4_link_list_text:link{
-    text-decoration: none;
-}
 
 
 .bd_l4_tab_addcart {

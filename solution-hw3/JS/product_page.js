@@ -1,13 +1,13 @@
 
+// Javascipt file linking test case. 
+console.log('Javascript file is successfully linked!');
 
-console.log('Javascript file is successfully linked!')
-
-// onchange event listener to trigger total calculation update ...
-
+// onchange event listener to trigger total calculation update 
+// trigger for glazing option
 let selectGlazing = document.querySelector('#glazing_Select');
 selectGlazing.addEventListener('change', function () { cal_TotalPrice("upd_Glazing");});
 
-
+// trigger for package size option
 let selectPackSize = document.querySelector('#packsize_Select');
 selectPackSize.addEventListener('change', function () { cal_TotalPrice("upd_PackSize");});
 
@@ -78,38 +78,39 @@ let allPackSizeOptions = [
 //update glazing selection to DOM to return individual item price (base + glazing)
 function item_GlazingChange(item) {
     console.log('Glazing option is updated!');
-    console.log(item);
     let price_SingleItem = (item.base_price + item.add_price);
-    console.log('Current single item price is ' + price_SingleItem)
-    return price_SingleItem
+    console.log('Current single item price is ' + price_SingleItem);
+    return price_SingleItem;
 }
 
 
 //update packsize selection to DOM to return price adaption factor
 function item_PackSizeChange(item) {
-    let item_TotalPrice = document.querySelector('#item_baseprice');
     console.log('Pack Size Option is updated!');
-    let price_Factor = item.price_adaption
+    let price_Factor = item.price_adaption;
     console.log('Current price factor is ' + price_Factor);
-    return price_Factor
+    return price_Factor;
 }
 
-item_GlazingChange(allGlazingOptions[0])
-item_PackSizeChange(allPackSizeOptions[0])
+
+// set initial values of the preference options and update to DOM.
+item_GlazingChange(allGlazingOptions[0]);
+item_PackSizeChange(allPackSizeOptions[0]);
+
+
 
 //on-change function to trigger preferences updates and calculate new total price
 function cal_TotalPrice(operation) {
-    console.log('onselect triggerred!')
-    // console.log(this);
-
+    
+    
+    // loop condition to audit glazing and pack size update.
     if (operation === "upd_Glazing") {  
         console.log('You selected flavor option number ' + selectGlazing.value);
     }
     else if (operation === "upd_PackSize") {        
         console.log('You selected pack size option number ' + selectPackSize.value);
     }
-
-    console.log("test");
+    console.log('on_select preference update triggerred!');
 
     //Excecute glazing option data update
     let index_glazing = parseInt(selectGlazing.value);
@@ -123,7 +124,7 @@ function cal_TotalPrice(operation) {
     console.log(price_Factor);
     
 
-    // Compute the total price by
+    // Compute the total price by single price item and adaption factor.
     let price_Total = price_SingleItem * price_Factor;
 
     //Round down the total price number to two digits
@@ -133,6 +134,7 @@ function cal_TotalPrice(operation) {
     //Display resulted item price
     let totalPriceToDisplay = document.querySelector('#item_baseprice');
     totalPriceToDisplay.innerText = '$' + price_Total;
+    console.log('Total Price ' + price_Total + ' has been displayed');
 }
 
 

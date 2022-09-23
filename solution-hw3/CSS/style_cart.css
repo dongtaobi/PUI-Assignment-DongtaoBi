@@ -1,4 +1,16 @@
 
+/* remove link text color */
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#000000; 
+    text-decoration:none; 
+}
+
 
 
 /* body level 0 style definitions */

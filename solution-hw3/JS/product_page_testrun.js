@@ -2,7 +2,11 @@
 
 console.log('Javascript file is successfully linked!')
 
-// onchange event listener to trigger total calculation update ...
+
+
+// Give it a listener for the 'change' event, which is a function that will run
+// when the selected option changes. You could also do this by setting the
+// onchange property of selectElement, e.g. selectElement.onchange = ...
 
 let selectGlazing = document.querySelector('#glazing_Select');
 selectGlazing.addEventListener('change', function () { cal_TotalPrice("upd_Glazing");});
@@ -11,9 +15,30 @@ selectGlazing.addEventListener('change', function () { cal_TotalPrice("upd_Glazi
 let selectPackSize = document.querySelector('#packsize_Select');
 selectPackSize.addEventListener('change', function () { cal_TotalPrice("upd_PackSize");});
 
+//Old code:
+//let selectPackSize = document.querySelector('#packsize_Select','#glazing_Select');
+//selectPackSize.addEventListener('change', onSelect_PackSizeOptionChange);
+
+//changing the price values
+// let glazingModifier = 0;
+// let packModifier = 1;
+
+// function onGlazingChange() {
+//     glazingModifier = this.value;
+//     recalculatePrice();
+// }
+
+// function onPacksizeChange() {
+//     packModifier = this.value;
+//     recalculatePrice();
+// }
+
+// recalculatePrice() {
+//     return (basePrice + glazingModifier) * packModifier;
+// }
 
 
-// list collection of all glazing options.
+// collection of all glazing options.
 let allGlazingOptions = [
     {
         option_name: 'Keep Original',
@@ -45,7 +70,7 @@ let allGlazingOptions = [
 ];
 
 
-// list collection of all package size options.
+// collection of all package size options.
 let allPackSizeOptions = [
     {
         option_packsize: 1,
@@ -136,7 +161,54 @@ function cal_TotalPrice(operation) {
 }
 
 
+// To be add:
+// Code to update total price in product detail page based on selection
+
+
+//Old code: 
+//function onSelect_GlazingOptionChange() {
+    // In this function, `this` corresponds to the select
+    // element. So `this.value` will contain the value of the
+    // selected option as a string.
+    //console.log('You selected flavor option number ' + this.value);
+  
+    // We need to convert the string value to an integer
+    //let index_glazing = parseInt(this.value);
+  
+    // Now retrieve the object at the index specified by the select's value
+    //let glazingOption = allGlazingOptions[index_glazing];
+  
+    // Update the UI
+    //item_GlazingChange(glazingOption);
+//}
+
+
+//function onSelect_PackSizeOptionChange() {
+    //console.log('You selected pack size option number ' + this.value);
+    // We need to convert the string value to an integer
+    //let index_packsize = parseInt(this.value);
+  
+    // Now retrieve the object at the index specified by the select's value
+    //let packSizeOption = allPackSizeOptions[index_packsize];
+  
+    // Update the UI
+    //item_PackSizeChange(packSizeOption);
+//}
+
+
+
+
+
  
+//function displayProductPrice() {
+
+    //let totalDisplayItemPrice = document.querySelector('#item_baseprice');
+    //console.log('Flavor option is updated!')
+    //totalDisplayItemPrice.innerText = '$' + item_TotalPrice 
+    //'$'+(item.base_price + item.add_price);
+//}
+
+      
 
 
 

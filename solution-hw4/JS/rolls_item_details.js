@@ -11,7 +11,8 @@ const chosenRoll = params.get('roll');
 console.log('Chosen "roll" is',chosenRoll);
 
 // Update the header text
-const titleElement = document.getElementById('rolltype-name-text');
+let titleElement = document.getElementById('rolltype-name-text');
+console.log(titleElement)
 titleElement.innerText = chosenRoll + ' Cinnamon Roll';
 
 let item_Data = rolls[chosenRoll];

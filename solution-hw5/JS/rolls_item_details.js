@@ -160,6 +160,7 @@ function cal_TotalPrice(operation) {
     console.log('Total Price ' + price_Total + ' has been displayed');
 
     return price_Total;
+    
 }
 
 //create a shopping cart array
@@ -172,6 +173,10 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
+    }
+
+    update_CartElement() {
+        const rollImageElement = this.element.querySelector('.')
     }
 }
 

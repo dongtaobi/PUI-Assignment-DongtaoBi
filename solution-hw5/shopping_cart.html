@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="CSS/style_cart.css">
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
+    <script src="./JS/rollsData.js"></script>
+    <script defer src="./JS/rolls_cart.js"></script>
+
+
   </head>
 
   <!-- page body begins here -->
@@ -46,57 +50,36 @@
           
         </div>
         <!--First item in check out list -->
-        <div class = "bd_l2_content_block_right">
-          <div class = "bd_l3_cart_item_block">
-            <div class = "bd_l4_right_item_left">
-              <a href="./product_original_cinnamon_roll.html" 
-              class = "bd_l4_content_block_item_cont">
-                <img class="bd_l5_content_block_item_pic" 
-                src="links/original-cinnamon-roll.jpg" 
-                alt="image loading..">
-              </a>
+        <div class = "bd_l2_content_block_right" id = "rollitem-list" >
+          <template class = "bd_l2_cart_item_block_large" id="cartitem-template"> 
+
+            <div class = "bd_l3_cart_item_block">
+              <div class = "bd_l4_right_item_left">
+                <a href="./product_original_cinnamon_roll.html" 
+                class = "bd_l4_content_block_item_cont">
+                  <img class="bd_l5_content_block_item_pic" 
+                  src="links/original-cinnamon-roll.jpg" 
+                  alt="image loading..">
+                </a>
+              </div>
+              <div class = "bd_l4_right_item_middle">
+                <p class="roll-title"> Original Cinnamon Roll </p>
+                <p class="roll-glazingtype"> Glazing : Keep Original</p>
+                <p class="roll-packagesize"> Pack Size : 1</p>
+              </div>
+              <div class = "bd_l4_right_item_right" id="">
+                <p class="roll-baseprice"> $2.49</p>
+              </div>
             </div>
-            <div class = "bd_l4_right_item_middle">
-              <p> Original Cinnamon Roll </p>
-              <p> Glazing : Keep Original</p>
-              <p> Pack Size : 1</p>
-            </div>
-            <div class = "bd_l4_right_item_right">
-              <p> $2.49</p>
-            </div>
-          
+
             <!-- Remove item key -->
-            <div class="bd_l3_buttom_remove">
-              Remove Item
-            </div>
-         </div>
-
-
-          <!--Second item in check out list -->
-          <div class = "bd_l3_cart_item_block">
-            <div class = "bd_l4_right_item_left">
-              <a href="./product_original_cinnamon_roll.html" 
-              class = "bd_l4_content_block_item_cont">
-                <img class="bd_l5_content_block_item_pic" 
-                src="links/double-chocolate-cinnamon-roll.jpg" 
-                alt="image loading..">
-              </a>
-            </div>
-            <div class = "bd_l4_right_item_middle">
-              <p> Double Chocolate Cinnamon Roll </p>
-              <p> Glazing : Sugar Milk</p>
-              <p> Pack Size : 6</p>
-            </div>
-            <div class = "bd_l4_right_item_right">
-              <p> $27.45 </p>
-            </div>
+            <button class="bd_l3_buttom_remove">
+             Remove Item
+            </button>
           </div>
 
-          <!-- Remove item key -->
-          <div class="bd_l3_buttom_remove">
-            Remove Item
-          </div>
           
+
           <div class = "bd_l3_cart_div_line"> </div>
 
           <div class = "bd_l3_cart_item_total">

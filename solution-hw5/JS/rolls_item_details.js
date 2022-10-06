@@ -74,6 +74,8 @@ let allGlazingOptions = [
 ];
 
 
+
+
 // list collection of all package size options.
 let allPackSizeOptions = [
     {
@@ -160,31 +162,14 @@ function cal_TotalPrice(operation) {
     console.log('Total Price ' + price_Total + ' has been displayed');
 
     return price_Total;
-    
 }
 
-//create a shopping cart array
-let cart_Array = [ ];
 
-//roll constructor
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-
-    update_CartElement() {
-        const rollImageElement = this.element.querySelector('.')
-    }
-}
 
 //event listener add to cart on 'click!'
-let addCart = document.querySelector('#item_add_to_cart');
-addCart.addEventListener('click', function () { update_Cart("add_item")});
+let add_Cart = document.querySelector('#item_add_to_cart');
+add_Cart.addEventListener('click', function () { update_Cart("add_item")});
 
-//variable exchance for class constructor
 
 //Code reference: www.section.io/engineering-education/
 //push new constructor to end of array
@@ -210,10 +195,25 @@ function update_Cart() {
 }
 
 
+//roll constructor
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice, imageURL) {
+        
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.imageURL = imageURL;
+    }
+}
 
 
 
 
+
+
+//create a shopping cart array
+let cart_Array = [ ];
 
 
 

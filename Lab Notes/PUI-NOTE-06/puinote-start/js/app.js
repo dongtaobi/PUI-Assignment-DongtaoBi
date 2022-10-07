@@ -75,7 +75,6 @@ function deleteNote(notecard) {
 
   // remove the actual Notecard object from our set of notecards
   notecardSet.delete(notecard);
-
   saveToLocalStorage();
 }
 

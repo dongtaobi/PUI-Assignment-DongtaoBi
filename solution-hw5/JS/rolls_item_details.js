@@ -67,7 +67,7 @@ let allGlazingOptions = [
     },
 
     {
-        option_name: 'Double Chololate',
+        option_name: 'Double Chocolate',
         base_price: item_BasePrice,
         add_price: 1.50,
     },

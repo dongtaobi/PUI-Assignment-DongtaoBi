@@ -17,29 +17,68 @@ let allGlazingOptions = [
     },
 
     {
-        option_name: 'Double Chololate',
+        option_name: 'Double Chocolate',
         add_price: 1.50,
     },
 ];
 
+// list collection of all package size options.
+let allPackSizeOptions = [
+    {
+        option_packsize: 1,
+        price_adaption: 1,
+    },
 
-function cal_SingleItemPrice (rollitem) {
+    {
+        option_packsize: 3,
+        price_adaption: 3,
+    },
 
-    console.log("rollitem for sing price calc");
+    {
+        option_packsize: 6,
+        price_adaption: 5,
+    },
 
-    console.log(rollitem);
+    {
+        option_packsize: 12,
+        price_adaption: 10,
+    },
+];
 
+
+function calc_ItemTotalPrice (rollitem) {
+
+    // console.log("rollitem for sing price calc");
+    // console.log(rollitem);
     let glazing_Selection = rollitem.rollglazing;
-    console.log("glazing option is:", glazing_Selection);
-    const add_Price = allGlazingOptions;
-    console.log("additional price is: ",add_Price);
-}
-
-
-function cal_CartTotalPrice () {
+    // console.log("glazing option is:", glazing_Selection);
     
+    let obj_Index_glazing = allGlazingOptions.findIndex(item => item.option_name === glazing_Selection);
+    const price_additional = allGlazingOptions[obj_Index_glazing]["add_price"];
+    // console.log("additional price is: ",price_additional);
+    
+    price_PerItem = Number(rollitem.baseprice) + (price_additional);
+    // console.log(price_PerItem)
+    
+    let packsize_Selection = rollitem.packsize;
+    // console.log("Pack sel is", packsize_Selection);
+    let obj_Index_packsize = allPackSizeOptions.findIndex(item => item.option_packsize === Number(packsize_Selection));
+    // console.log("index is", obj_Index_packsize);
+    const price_multiplier = allPackSizeOptions[obj_Index_packsize]["price_adaption"];
+    // console.log("price mutiplier is ",price_multiplier);
 
+    let price_ItemTotal = round(price_PerItem * price_multiplier);
+    console.log("Created an item with total :", price_ItemTotal);
+
+    return price_ItemTotal;
 }
+
+//function to round a price number
+function round(number_raw) {
+    let number_rounded = (Math.round(number_raw*100))/100;
+    return number_rounded;
+}
+
 
 
 //roll constructor
@@ -57,18 +96,11 @@ class Roll {
     }
 }
 
-//create a shopping cart array
+//create an empty shopping cart array
 let cart_Array = [ ];
-//console.log("array created:" + cart_Array);
-
-
 
 // This function creates a new rollitem object, and adds it to rollitem array.
 function addNewRoll(rollType, rollGlazing, packSize, basePrice, imageURL) {
-
-
-
-
 
     // Create a new roll object. The roll constructor takes three
     // arguments: the image URL, title text,  and body text.
@@ -112,25 +144,42 @@ function createElement(rollitem) {
     rollitemListElement.prepend(rollitem.element);
 
     update_CartElement(rollitem);
+    calc_UpdatePriceArray();
+    calc_CartTotalPrice(price_CartTotalArray);
 
-    console.log("rollitem.element printed here:");
-    console.log(rollitem.element);
+    let cart_TotalPrice = calc_CartTotalPrice(price_CartTotalArray);
+    update_CartTotalPrice(cart_TotalPrice);
 
-    console.log("rollitem printed here:");
-    console.log(rollitem);
-    return rollitem.element;
-    
+    console.log("Created an item in cart:", rollitem);
+    return rollitem;
 }
 
+function deleteRollItem(rollitem) {
+    // remove the cart item DOM object from the UI
+    rollitem.element.remove();
+  
+    // remove the actual cart item object from our array of items
+    cart_Array.pop(rollitem);
+ 
+    
+    price_ToRemove = rollitem.element.querySelector('.roll-baseprice').innerText;
+    // console.log('to remove', Number(price_ToRemove));
+    // console.log('before remove', price_CartTotalArray);
 
+    
+    index_Remove = price_CartTotalArray.indexOf(Number(price_ToRemove));
+
+    // console.log('index to remove is',index_Remove);
+    price_CartTotalArray.splice(index_Remove, 1);
+    // console.log('after remove', price_CartTotalArray);
+    let cart_TotalPrice = calc_CartTotalPrice(price_CartTotalArray);
+    update_CartTotalPrice(cart_TotalPrice);
+}
 
 
 function update_CartElement(rollitem) {
 
-
-    price_Peritem =  cal_SingleItemPrice(rollitem);
-    console.log("price with galzing: ", price_Peritem);
-
+    price_ItemTotal =  calc_ItemTotalPrice(rollitem);
 
     // get the HTML elements that need updating
     const rollTitleElement = rollitem.element.querySelector('.roll-title');
@@ -143,69 +192,78 @@ function update_CartElement(rollitem) {
     rollTitleElement.innerText = rollitem.rolltype + " Cinnamon Roll";
     rollGlazingType.innerText = rollitem.rollglazing;
     rollPackageSize.innerText = "Pack size: " + rollitem.packsize;
-    rollBasePrice.innerText = rollitem.baseprice;
+    rollBasePrice.innerText = price_ItemTotal;
     rollImageElement.src = rollitem.imageurl;
-
-
-
 }
 
 
+// create an empty array for price calculation
+let price_CartTotalArray = [];
 
-function deleteRollItem(rollitem) {
-    // remove the cart item DOM object from the UI
-    rollitem.element.remove();
-  
-    // remove the actual cart item object from our array of items
-    cart_Array.remove(rollitem);
-
+// update price array based on new items created 
+function calc_UpdatePriceArray() {
+    let cart_ItemTotal = document.querySelector('.roll-baseprice').innerText;
+    price_CartTotalArray.push (Number(cart_ItemTotal));
+    // console.log('Updated cart total price: ', price_CartTotalArray);
+    return price_CartTotalArray;
 }
 
+// calculate cart total price whenver items are added or deleted
+function calc_CartTotalPrice(array) {
+    // console.log('this array =', array);
+    let sum = 0;
+    for ( element of array) {
+        sum = sum + round(Number(element));
+    }
+    // console.log(round(sum));
+    return round(sum);
+}
 
+// to replace the displayed price with updated total
+function update_CartTotalPrice (number) {
+    const cartTotalPrice = document.querySelector('#cart-total-price');
+    cartTotalPrice.innerText = '$' + number;
+}
 
+//manually added item
 const first_item = addNewRoll (
     'Original',
     'Sugar Milk',
     '1',
     '2.49',
     './links/original-cinnamon-roll.jpg'
-)
-
+);
+//manually added item
 const second_item = addNewRoll (
     'Walnut',
-    'Sugar Milk',
+    'Vanilla Milk',
     '12',
-    '2.49',
+    '3.49',
     './links/walnut-cinnamon-roll.jpg'
-)
-
+);
+//manually added item
 const third_item = addNewRoll (
     'Raisin',
     'Sugar Milk',
     '3',
-    '2.49',
+    '2.99',
     './links/raisin-cinnamon-roll.jpg'
-)
-
+);
+//manually added item
 const fourth_item = addNewRoll (
     'Apple',
     'Keep Original',
     '3',
-    '2.49',
+    '3.49',
     './links/apple-cinnamon-roll.jpg'
-)
-
+);
+// call function to create objects above
+const item_four = createElement(fourth_item);
+const item_three = createElement(third_item);
+const item_two = createElement(second_item);
 const item_one = createElement(first_item);
-//console.log("new item created:" );
 
-// const item_two = createElement(second_item);
-//console.log("new item created:" );
-
-// const item_three = createElement(third_item);
-//console.log("new item created:" );
-
-// const item_four = createElement(fourth_item);
-//console.log("new item created:" );
+console.log("Current cart item array: ", cart_Array);
 
 
 

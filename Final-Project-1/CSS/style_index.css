@@ -1,0 +1,95 @@
+
+/* remove link text color */
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#000000; 
+    text-decoration:none; 
+}
+
+body {
+    background-color: rgb(114, 195, 189, 1);
+    align-content: center;
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+}
+
+/* body level 0 style definitions */
+.bd_l0_maindisplay {
+    width: 1000px;
+    height: max-content;
+    align-content: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* body level 1 style definitions */
+.bd_l1_navigation {
+    width: 100%;
+    height: 200px;
+    align-content: center;
+    background-color: rgba(248, 209, 82, 1);
+    padding-left: 45px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+
+/* body level 1 style definitions */
+.bd_l1_contentbox {
+    width: 100%;
+    height: 1200px;
+    align-content: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bd_l2_logobox {
+    width: 200px;
+    height: 200px;
+    margin: none;
+    align-content: center;
+    margin-left: none;
+    background-color:rgb(255, 226, 131);
+}
+
+.bd_l2_nvg_bar {
+    width: 500px;
+    height: 40px;
+    margin-top: auto;
+    align-self: right;
+    text-align: center;
+    background-color:rgb(255, 226, 131);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    float: right;
+}
+
+.bd_l3_nvg_button {
+    width: 200px;
+    height: 40px;
+    background-color:rgb(255, 247, 220);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

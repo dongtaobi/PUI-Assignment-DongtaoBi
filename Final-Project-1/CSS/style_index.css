@@ -7,7 +7,7 @@
   
 
 a {
-    color: #000000;
+    color: rgb(59, 59, 59);
     text-decoration: none;
 }
 
@@ -20,16 +20,19 @@ body {
     background-color: rgb(114, 195, 189, 1);
     margin-top: 0px;
     font-family: Ubuntu, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     
 }
 
+
+
+
 /* body level 0 style definitions */
 .bd_l0_maindisplay {
-    min-width: 1000px;
+    min-width: 800px;
     max-width: 1100px;
+    width: 80%;
     padding: 5px;
-    
 
     height: max-content;
     align-content: center;
@@ -53,6 +56,9 @@ body {
     color: white;
     display: flex;
     gap: 20px;
+    
+    
+    align-items: center;
 }
 
 
@@ -63,7 +69,7 @@ body {
     align-content: center;
     background-color: rgba(248, 209, 82, 1);
     border-radius: 0px 0px 20px 20px;
-
+    
     display: flex;
     gap: 20px;
 }
@@ -98,7 +104,7 @@ body {
     
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 16px;
 }
 
 
@@ -131,17 +137,17 @@ body {
 
 
 .bd_l3_nvg_button {
-    width: 160px;
+    width: 180px;
     height: 40px;
     background-color:rgb(255, 238, 181, 1);
     border-radius: 20px 20px 0px 0px;
-    font-size: 16px;
+    font-size: 18px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 
@@ -154,7 +160,7 @@ body {
 }
 
 
-@media only screen and (max-width: 908px) {
+@media only screen and (max-width: 800px) {
   /* For mobile phones: */
   [class*="bd_l2_content"] {
     width: 100%;

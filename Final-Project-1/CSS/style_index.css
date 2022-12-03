@@ -1,6 +1,11 @@
 
 /* remove link text color */
 
+* {
+    box-sizing: border-box;
+  }
+  
+
 a {
     color: #000000;
     text-decoration: none;
@@ -21,8 +26,11 @@ body {
 
 /* body level 0 style definitions */
 .bd_l0_maindisplay {
-    width: 1000px;
+    min-width: 1000px;
+    max-width: 1100px;
     padding: 5px;
+    
+
     height: max-content;
     align-content: center;
     background-color: white;
@@ -36,6 +44,18 @@ body {
 }
 
 
+.bd_l0_socialmedia {
+    width: 100%;
+    height: 30px;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(161, 161, 161);
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+
 /* body level 1 style definitions */
 .bd_l1_navigation {
     width: 100%;
@@ -45,7 +65,6 @@ body {
     border-radius: 0px 0px 20px 20px;
 
     display: flex;
-    flex-direction: row;
     gap: 20px;
 }
 
@@ -53,14 +72,10 @@ body {
 /* body level 1 style definitions */
 .bd_l1_content {
     width: 100%;
-    height: 4000px;
+    
     background-color: lightgrey;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     gap: 40px;
 }
 
@@ -97,17 +112,19 @@ body {
 
 
 .bd_l2_content_left {
-    width: 300px;
+    min-width: 300px;
+    
     height: 200px;
     background-color: rgb(160, 196, 241);
-    flex-grow: 1;
+    
 }
 
 .bd_l2_content_right {
-    width: 600px;
+    min-width: 60%;
+    
+    margin-left: auto;
     height: 200px;
     background-color: rgb(220, 234, 252);
-    flex-grow: 1;
     
 }
 
@@ -134,4 +151,12 @@ body {
 
 .bd_l3_nvg_button:hover {
     background-color:white;
+}
+
+
+@media only screen and (max-width: 908px) {
+  /* For mobile phones: */
+  [class*="bd_l2_content"] {
+    width: 100%;
+  }
 }

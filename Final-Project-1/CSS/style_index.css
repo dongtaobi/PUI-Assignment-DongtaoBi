@@ -118,16 +118,14 @@ body {
 
 
 .bd_l2_content_left {
-    min-width: 300px;
-    
+    min-width: 32%;
     height: 200px;
-    background-color: rgb(160, 196, 241);
+    background-color: none;
     
 }
 
 .bd_l2_content_right {
-    min-width: 60%;
-    
+    min-width: 62%;
     margin-left: auto;
     height: 200px;
     background-color: rgb(220, 234, 252);
@@ -137,7 +135,7 @@ body {
 
 
 .bd_l3_nvg_button {
-    width: 180px;
+    width: 160px;
     height: 40px;
     background-color:rgb(255, 238, 181, 1);
     border-radius: 20px 20px 0px 0px;
@@ -151,16 +149,33 @@ body {
 }
 
 
-.bd_l3_nvg_button a {
-    gap:10px;
-}
+
 
 .bd_l3_nvg_button:hover {
     background-color:white;
 }
 
+.bd_l3_statusbox{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: none;
+}
 
-@media only screen and (max-width: 800px) {
+.bd_l4_statusgraphic {
+    width: 200px;
+    border: 10px white outset;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: auto;
+    
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
   /* For mobile phones: */
   [class*="bd_l2_content"] {
     width: 100%;

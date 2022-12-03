@@ -7,7 +7,7 @@
   
 
 a {
-    color: rgb(59, 59, 59);
+    color: rgb(78, 78, 78);
     text-decoration: none;
 }
 
@@ -17,10 +17,17 @@ a:hover {
 }
 
 body {
-    background-color: rgb(114, 195, 189, 1);
+    background-color: #72c3bd;
     margin-top: 0px;
     font-family: Ubuntu, sans-serif;
     font-size: 18px;
+    background-image:  linear-gradient(135deg, #72c3bd 25%, transparent 25%), 
+                        linear-gradient(225deg, #72c3bd 25%, transparent 25%), 
+                        linear-gradient(45deg, #72c3bd 25%, transparent 25%), 
+                        linear-gradient(315deg, #72c3bd 25%, #61ada8 25%);
+    background-position:  39px 0, 39px 0, 0 0, 0 0;
+    background-size: 78px 78px;
+    background-repeat: repeat;
     
 }
 
@@ -52,10 +59,10 @@ body {
     height: 30px;
     align-content: center;
     justify-content: center;
-    background-color: rgb(161, 161, 161);
+    background-color: rgb(61, 61, 61);
     color: white;
     display: flex;
-    gap: 20px;
+    gap: 60px;
     
     
     align-items: center;
@@ -78,11 +85,11 @@ body {
 /* body level 1 style definitions */
 .bd_l1_content {
     width: 100%;
-    
-    background-color: lightgrey;
+    border-top: 0.5px lightgrey ridge;
+    background-color: none;
     display: flex;
     flex-wrap:wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
 .bd_l2_logobox {
@@ -120,12 +127,14 @@ body {
 .bd_l2_content_left {
     min-width: 32%;
     height: auto;
-    background-color: none;
+    background-color: rgba(248, 209, 82, 1);
+    margin-top: 10px;
+    border-radius: 20px;
     
 }
 
 .bd_l2_content_right {
-    min-width: 62%;
+    min-width: 64%;
     margin-left: auto;
     height: auto;
     background-color: rgb(220, 234, 252);
@@ -156,14 +165,38 @@ body {
 }
 
 .bd_l3_statusbox{
-    width: 100%;
+    width: auto;
     height: auto;
     margin-top: 10px;
-    align-items: center;
-    background-color: pink;
+    
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    
 
+    align-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 40px;
+}
+
+
+.bd_l3_statustext {
+    background-color: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
     gap: 15px;
-    flex-direction: row;
+    
+
+
 }
 
 .bd_l4_statusgraphic {
@@ -171,19 +204,24 @@ body {
     height: 200px;
     border: 10px white inset;
     border-radius: 100px;
-    
-    margin-left: 30px;
     margin-right: auto;
+    margin-left: auto;
     
 }
 
-.bd_l4_statustext {
-    width: 100% - margin;
-    padding: 12px;
-    background-color: wheat;
-    
-    margin-left: 30px;
-    margin-right: auto;
+
+
+.bd_l4_statustext_box {
+    height: 40px;
+    width: 300px;
+    background-color: rgb(255, 238, 181, 1);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 20px;
+    border: 4px white ridge ;
     
 }
 

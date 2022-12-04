@@ -39,7 +39,8 @@ body {
     min-width: 800px;
     max-width: 1100px;
     width: 80%;
-    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     height: auto;
     align-content: center;
@@ -55,17 +56,25 @@ body {
 
 
 .bd_l0_socialmedia {
-    width: 100%;
+    
+    min-width: 800px;
+    max-width: 1100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     height: 30px;
+
+    
+
     align-content: center;
     justify-content: center;
-    background-color: rgb(39, 39, 39);
+    align-items: center;
+
+    background-color: rgb(65, 65, 65);
     color: white;
     display: flex;
     gap: 60px;
     
-    
-    align-items: center;
 }
 
 
@@ -74,7 +83,7 @@ body {
     width: 100%;
     height: 200px;
     align-content: center;
-    background-color: rgba(248, 209, 82, 1);
+    background-color: #f8d152;
     border-radius: 0px 0px 20px 20px;
     
     display: flex;
@@ -85,11 +94,10 @@ body {
 /* body level 1 style definitions */
 .bd_l1_content {
     width: 100%;
-    border-top: 0.5px lightgrey ridge;
+    border-top: 0.5px lightgrey ridge ;
     background-color: none;
     display: flex;
     flex-wrap:wrap;
-    gap: 20px;
 }
 
 .bd_l2_logobox {
@@ -125,19 +133,23 @@ body {
 
 
 .bd_l2_content_left {
-    min-width: 32%;
-    height: auto;
-    background-color: rgba(248, 209, 82, 1);
+    width: 34%;  
     margin-top: 10px;
-    border-radius: 20px;
+    height: auto;
+    background-color: rgb(77, 209, 176);
     
+    flex: 1 1 auto;
 }
 
 .bd_l2_content_right {
-    min-width: 64%;
-    margin-left: auto;
-    height: auto;
+    width: 60%;    
+    margin-top: 10px;
+    height: 200px;
+ 
+    margin-right: auto;
+
     background-color: rgb(220, 234, 252);
+    flex: 2.5 2.5 auto;
     
 }
 
@@ -149,6 +161,7 @@ body {
     background-color:rgb(255, 238, 181, 1);
     border-radius: 20px 20px 0px 0px;
     font-size: 18px;
+    font-weight: bold;
 
     display: flex;
     flex-direction: row;
@@ -159,12 +172,11 @@ body {
 
 
 
-
 .bd_l3_nvg_button:hover {
     background-color:white;
 }
 
-.bd_l3_statusbox{
+.bd_l3_statusbox_container{
     width: auto;
     height: auto;
     margin-top: 10px;
@@ -184,8 +196,9 @@ body {
 }
 
 
-.bd_l3_statustext {
-    background-color: none;
+.bd_l3_statustext_container {
+    width: 100%;
+    background-color: #61ada8;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -193,23 +206,43 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
     
-
-
 }
 
-.bd_l4_statusgraphic {
+
+/* animated/static image for the pet */
+.bd_l4_statusgraphic_container_gif {
     width: 200px;
     height: 200px;
-    border: 10px white inset;
+    border: solid 10px white;
     border-radius: 100px;
     margin-right: auto;
     margin-left: auto;
     
 }
 
-.bd_l3_statuscards {
+.bd_l4_statusgraphic_container_tab {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+    display: flex;
+    flex-direction: row;   
+
+    justify-content: space-between;
+}
+
+
+/*  */
+.bd_l3_statuscards_container {
+    width: 100%;
+    background-color: #61ada8;
+    margin-left: auto;
+    margin-right: auto;
+
     height: auto;
     display: flex;
     flex-direction: column;
@@ -218,35 +251,50 @@ body {
 
 
 
-.bd_l4_statustext_box {
-    height: 40px;
-    width: 300px;
-    background-color: rgb(255, 238, 181, 1);
-    text-align: center;
+.bd_l5_statustext_box {
+    height: 160px;
+    width: 24%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+    padding-bottom: 20px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 20px 20px 20px;
-    border: 4px white ridge ;
+    background-color: #f8d152;
+    font-weight: bold;
     
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+
+    /* border-radius: 0px 20px 20px 20px; */
+    /* border: solid 2px white; */
 }
 
 .bd_l4_statuscards_card {
-    max-width: 600px;
-    width: 400px;
+    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
+
+    
     height: 40px;
     margin: 0px 30px 0px 30px;
-    background-color: #ffffff;
+    background-color: #d4d4d4;
     align-self: center;
-    border-radius: 20px;
+    border-radius: 0px;
     box-sizing:border-box;
-    padding:20px;
+    padding:10px;
+    /* border: solid 2px white; */
 
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
+
 }
 
 

@@ -16,6 +16,23 @@ a:hover {
     text-decoration:none; 
 }
 
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+
+
+
+
+
 body {
     background-color: #72c3bd;
     margin-top: 0px;
@@ -31,20 +48,20 @@ body {
     
 }
 
-
-
-
 /* body level 0 style definitions */
 .bd_l0_maindisplay {
     min-width: 800px;
     max-width: 1100px;
     width: 80%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
 
     height: auto;
     align-content: center;
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -54,7 +71,6 @@ body {
     
 }
 
-
 .bd_l0_socialmedia {
     
     min-width: 800px;
@@ -63,14 +79,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: 30px;
-
     
-
     align-content: center;
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(65, 65, 65);
+    background-color: rgb(26, 26, 26);
     color: white;
     display: flex;
     gap: 60px;
@@ -80,40 +94,54 @@ body {
 
 /* body level 1 style definitions */
 .bd_l1_navigation {
-    width: 100%;
-    height: 200px;
+    min-width: 800px;
+    max-width: 1100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: auto;
+    min-height: 20px;
+    max-height: 280px;
     align-content: center;
-    background-color: #f8d152;
-    border-radius: 0px 0px 20px 20px;
+    background-color:#ffe590;
+    border-radius: 0px 0px 0px 0px;
     
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-bottom: 8px #f8d152 inset;
+    
 }
 
 
 /* body level 1 style definitions */
 .bd_l1_content {
     width: 100%;
-    border-top: 0.5px lightgrey ridge ;
+    border-top: none;
     background-color: none;
     display: flex;
     flex-wrap:wrap;
+    gap: 60px;
 }
 
 .bd_l2_logobox {
-    width: 200px;
-    height: 200px;
-    margin: none;
-    align-content: center;
-    margin-left: 40px;
-    background-color:none;
+   float: left;
+    width: 35%;
+    max-width: 200px;
+
+    /* background-color:black; */
 }
 
 .bd_l2_nvg_bar {
     height: 40px;
     margin-top: auto;
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: auto;
     text-align: center;
     background-color:none;
     
@@ -126,30 +154,34 @@ body {
 .bd_l2_logobox_logo {
     width: 200px;
     height: 200px;
-    align-content: center;
-    border-radius: 20px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 .bd_l2_content_left {
     width: 34%;  
-    margin-top: 10px;
     height: auto;
-    background-color: rgb(77, 209, 176);
-    
-    flex: 1 1 auto;
+    /* background-color: rgb(77, 209, 176); */
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .bd_l2_content_right {
-    width: 60%;    
+    width: 56%;    
     margin-top: 10px;
-    height: 200px;
+    height: auto;
  
     margin-right: auto;
 
     background-color: rgb(220, 234, 252);
     flex: 2.5 2.5 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     
 }
 
@@ -158,7 +190,7 @@ body {
 .bd_l3_nvg_button {
     width: 160px;
     height: 40px;
-    background-color:rgb(255, 238, 181, 1);
+    background-color: #f8d152;
     border-radius: 20px 20px 0px 0px;
     font-size: 18px;
     font-weight: bold;
@@ -176,10 +208,11 @@ body {
     background-color:white;
 }
 
+
 .bd_l3_statusbox_container{
     width: auto;
     height: auto;
-    margin-top: 10px;
+    margin-top: 0px;
     
     
     display: flex;
@@ -192,17 +225,18 @@ body {
     align-content: center;
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 40px;
+    margin-top: 0px;
+    
 }
 
 
 .bd_l3_statustext_container {
     width: 100%;
-    background-color: #61ada8;
+    /* background-color: #61ada8; */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 0px;
 
     display: flex;
     flex-direction: column;
@@ -224,22 +258,22 @@ body {
 
 .bd_l4_statusgraphic_container_tab {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 
-    background-color: white;
+    /* background-color: rgb(141, 46, 46); */
     display: flex;
-    flex-direction: row;   
-
+    flex-direction: row;
     justify-content: space-between;
+    
 }
 
 
 /*  */
 .bd_l3_statuscards_container {
     width: 100%;
-    background-color: #61ada8;
+    /* background-color: #61ada8; */
     margin-left: auto;
     margin-right: auto;
 
@@ -249,17 +283,89 @@ body {
     gap: 5px;
 }
 
+.bd_l3_schedule_container {
+    width: 100%;
+    height: auto;
+    /* background-color: #61ada8; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bd_l3_schedule_create {
+    width: 100%;
+    height: 120px;
+    background-color: #5c5c5c;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.bd_l3_schedule_create_box {
+
+}
+
+
+
+.bd_l4_statuscards_card {
+    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    color: white;
+
+    
+    height: 40px;
+
+    background-color: #666666;
+    align-self: center;
+    border-radius: 0px;
+    box-sizing:border-box;
+    padding-left:30px;
+    padding-right: 30px;
+    /* border: solid 2px white; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.bd_l4_schedule_event_card {
+    
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+
+    color: white;
+    font-size: 20px;
+    background-color: #d07575;
+
+
+    padding-left:30px;
+    padding-right: 30px;
+    align-self: center;
+    box-sizing:border-box;
+    /* border: solid 2px white; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
 
 
 .bd_l5_statustext_box {
-    height: 160px;
-    width: 24%;
-    margin-left: auto;
-    margin-right: auto;
+    
+    height: 140px;
+    width: 32%;
+    color: white;
+
     padding-top: 35px;
     padding-bottom: 20px;
 
-    background-color: #f8d152;
+    background-color: #666666;
     font-weight: bold;
     
     display: flex;
@@ -275,32 +381,20 @@ body {
     /* border: solid 2px white; */
 }
 
-.bd_l4_statuscards_card {
-    max-width: 100%;
-    width: 100%;
-    max-width: 400px;
-
-    
-    height: 40px;
-    margin: 0px 30px 0px 30px;
-    background-color: #d4d4d4;
-    align-self: center;
-    border-radius: 0px;
-    box-sizing:border-box;
-    padding:10px;
-    /* border: solid 2px white; */
-
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
-
-}
-
 
 @media only screen and (max-width: 1200px) {
   /* For mobile phones: */
   [class*="bd_l2_content"] {
     width: 100%;
   }
+}
+
+.med-title {
+    background-color: #f8d152;
+    border-radius: 0 0 20px 20px;
+    font-size: 28px;
+    height: 55px;
+    font-weight: bolder;
+    letter-spacing: px;
+    color: #5c5c5c;
 }

@@ -94,6 +94,8 @@ body {
 
 /* body level 1 style definitions */
 .bd_l1_navigation {
+    background-image: url('./links/image2.jpg');
+
     min-width: 800px;
     max-width: 1100px;
     width: 80%;
@@ -102,7 +104,7 @@ body {
 
     height: auto;
     min-height: 20px;
-    max-height: 280px;
+    max-height: 600px;
     align-content: center;
     background-color:#ffe590;
     border-radius: 0px 0px 0px 0px;
@@ -114,7 +116,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
 
-    border-bottom: 8px #f8d152 inset;
+    border-bottom: 12px #f8d152 inset;
     
 }
 
@@ -171,7 +173,7 @@ body {
 
 .bd_l2_content_right {
     width: 56%;    
-    margin-top: 10px;
+    margin-top: 0px;
     height: auto;
  
     margin-right: auto;
@@ -292,20 +294,54 @@ body {
     gap: 5px;
 }
 
+
 .bd_l3_schedule_create {
     width: 100%;
-    height: 120px;
-    background-color: #5c5c5c;
-    
+    max-width: 600px;
+    align-self: center;
+    height: 155px;
+    /* background-color: #666666; */
+
     display: flex;
-    flex-direction: row;
-    gap: 25px;
 }
 
-.bd_l3_schedule_create_box {
 
+.bd_l4_schedule_create_left {
+    color: #666666;
+    width: 80px;
+    height: 100%;
+    background-color:#f8d152;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right: solid 5px white;
 }
 
+
+.bd_l4_schedule_create_right {
+    width: 100%;
+    /* background-color: #8f3d3d; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.bd_l5_schedule_create_options {
+    height: 60px;
+    width: 100%;
+    background-color: #61ada8;
+}
+
+.bd_l5_schedule_create_input{
+    height: 100%;
+    background-color: gray;
+}
 
 
 .bd_l4_statuscards_card {

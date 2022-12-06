@@ -16,7 +16,7 @@ a:hover {
     text-decoration:none; 
 }
 
-nav a:active {
+nav a:target {
     background-color:#f8d152;
 }
 
@@ -501,7 +501,7 @@ body {
     }
 }
 
-a:active {
+a:target {
     background-color: red;
 }
 
@@ -514,7 +514,7 @@ a:active {
 
 .bd_l3_nvg_button:hover {
     transition: all .2s ease-in-out;
-    transform: scale(1.25);
+    transform: scale(1.5);
 }
 
 .bd_l5_gallery_img:hover{

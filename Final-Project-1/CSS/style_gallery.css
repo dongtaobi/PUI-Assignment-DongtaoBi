@@ -10,7 +10,7 @@ img:hover { transform: scale(1.1); }
 
 .column {
   flex: 33%;
-  max-width: 33%;
+  max-width: 25%;
   padding: 0 4px;
 }
 

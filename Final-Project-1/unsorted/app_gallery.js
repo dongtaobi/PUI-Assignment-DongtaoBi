@@ -1,4 +1,4 @@
-import sources from "./images.js";
+import sources from "./app_gallery_images.js";
 
 const {body} = document;
 
@@ -30,6 +30,8 @@ const timing = {
   easing: ".23, 1, .32, 1"
 };
 
+
+
 const fade = image => {
   toggle(image).removeAttribute("loading");
   image.animate({
@@ -39,7 +41,7 @@ const fade = image => {
     duration: timing.duration,
     easing: `cubic-bezier(${timing.easing})`
   });
-};
+}; 
 
 const animate = async index => {
   const {innerWidth, innerHeight} = window;
@@ -139,5 +141,7 @@ window.addEventListener("keyup", ({key}) => {
   if (key != "Escape" || list.id != scrollerID) return;
   animate();
 });
+
+
 
 body.append(list);

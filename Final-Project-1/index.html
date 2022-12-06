@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>HomePage</title>
 
-    <script src="./JS/rollsData.js"></script>
+    <script src="./JS/app_index.js"></script>
   </head>
 
   <!-- page body begins here -->
@@ -36,23 +36,23 @@
     
       <nav class="bd_l2_nvg_bar"> 
     
-        <div class="bd_l3_nvg_button">
-          <a href="./index.html"><i class="fa fa-fw fa-house"></i>  Dashboard</a> 
-        </div>
+        <a class="bd_l3_nvg_button" href="./index.html">
+          <div > <i class="fa fa-fw fa-house"></i>  Dashboard</div> 
+        </a>
     
-        <div class="bd_l3_nvg_button">
-          <a href="./page_events.html"><i class="fa fa-fw fa-calendar"></i>  Events </a>
-        </div>
+        <a class="bd_l3_nvg_button" href="./page_events.html">
+          <div > <i class="fa fa-fw fa-calendar"></i>  Events </div>
+        </a>
     
-        <div class="bd_l3_nvg_button">
-          <a href="./page_gallery.html"><i class="fa fa-fw fa-image"></i> Gallery </a>
-        </div>
+        <a class="bd_l3_nvg_button" href="./page_gallery.html">
+          <div > <i class="fa fa-fw fa-image"></i> Gallery </div>
+        </a>
 
-        <div class="bd_l3_nvg_button">
-          <a href="#"><i class="fa fa-fw fa-calendar"></i>  Documents </a>
-        </div>
+        <nav class="bd_l3_nvg_button" href="./page_documents.html">
+          <div > <i class="fa fa-fw fa-calendar"></i>  Documents </div>
+        </a>
 
-      </nav>
+      </a>
     </div>
     <!-- primary graphics display area -->
     <div class="bd_l0_maindisplay">
@@ -64,7 +64,7 @@
         <div class="bd_l2_content_left">
 
           <div class="bd_l3_statusbox_container">
-            <img class="bd_l4_statusgraphic_container_gif"  src = "links/status-relax.gif"> </img>
+            <img class="bd_l4_statusgraphic_container_gif breathing-animation"  src = "links/status-relax.gif"> </img>
 
             <div class="bd_l3_statustext_container"> 
               <div style="background-color:#f8d152; font-weight: bold;" 
@@ -97,7 +97,7 @@
             <div class = "bd_l4_statuscards_card">
               <div>PLAYING</div>
               <div>1hr 12min</div>
-
+              
             </div>
 
             <div class = "bd_l4_statuscards_card">
@@ -113,6 +113,12 @@
 
             </div>
 
+
+            <div class = "bd_l4_statuscards_card">
+              <div>RESTROOM</div>
+              <div>12min</div>
+              
+            </div>
 
             <div class = "bd_l4_statuscards_card">
               <div>RESTROOM</div>
@@ -153,16 +159,24 @@
       <div class="bd_l2_content_right">
         <div class= "bd_l3_schedule_container">
           <div class= "bd_l4_schedule_event_card med-title"> <div>UPCOMING EVENTS</div> </div>
+
           <div class= "bd_l4_schedule_event_card"> 
             <i class = "fa fa-user-doctor fa-2x"></i>
             <div>Veterinary Visit</div>
             <div> 22-09-26</div>
-            <i class="fa fa-bars"></i> </div>
+            <i class="fa fa-bars"></i>
+            <div id="details" style="display: none">
+              TEST HIDEEN CONTENT
+            </div>
+          </div>
+
           <div class= "bd_l4_schedule_event_card"> 
             <i class = "fa fa-user-doctor fa-2x"></i>
             <div>Veterinary Visit</div>
             <div> 22-09-26</div>
-            <i class="fa fa-bars"></i> </div>
+            <i class="fa fa-bars"></i> 
+          </div>
+        
           <div class= "bd_l4_schedule_event_card"> 
             <i class = "fa fa-user-doctor fa-2x"></i>
             <div>Veterinary Visit</div>
@@ -173,14 +187,32 @@
 
         <div class= "bd_l3_schedule_create">
           <div class = "bd_l4_schedule_create_left">
-            <i class = "fa fa-pen-to-square fa-2x "></i>
+            <i id="editor" class = "fa fa-pen-to-square fa-2x "></i>
           </div>
 
           <div class = "bd_l4_schedule_create_right" >
-            <div class = "bd_l5_schedule_create_options"> Input Options</div>
-            <div class = "bd_l5_schedule_create_input" > Input Box</div>
+            <div class = "bd_l5_schedule_create_options"> 
+              Add a new event.
+            </div>
+            <div class = "bd_l5_schedule_create_input" ></div>
           </div>
         </div>
+
+        <div class= "bd_l3_gallery_container">
+          <div class= "bd_l4_schedule_event_card med-title"> <div> PHOTO GALLERY </div> </div>
+          <div>
+            <img src="./links/4.jpg" >
+            <img src="./links/5.jpg" >
+            <img src="./links/6.jpg" >
+            <img src="./links/7.jpg" >
+            <img src="./links/8.jpg" >
+            <img src="./links/9.jpg" >
+            <img src="./links/10.jpg" >
+            <img src="./links/11.jpg" >
+          </div>
+       </div>
+
+
         
       </div>
 

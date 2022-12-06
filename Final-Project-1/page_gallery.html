@@ -3,11 +3,13 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="CSS/style_index.css">
+    <link rel="stylesheet" href="CSS/style_gallery.css">
+
     <!-- import Ubuntu font family from Google API -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <script src="https://kit.fontawesome.com/35d3d9d2ef.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Gallery</title>
+    <title>HomePage</title>
 
     <script src="./JS/rollsData.js"></script>
   </head>
@@ -25,10 +27,12 @@
      <a href="#" ><i class="fa fa-linkedin" class = "soc_icons"></i></a>
      </div>
 
+
+
     <!-- navigation bar and header area -->
     <div class="bd_l1_navigation" src="links/nav-bar-img.webp">
 
-      <a class="bd_l2_logobox" href="#">
+      <a class="bd_l2_logobox" href="./index.html">
         <img class="bd_l2_logobox_logo" src="links/Logo-1.png" alt="image loading..">
       </a>
     
@@ -39,11 +43,11 @@
         </div>
     
         <div class="bd_l3_nvg_button">
-          <a href="#"><i class="fa fa-fw fa-calendar"></i>  Events </a>
+          <a href="./page_events.html"><i class="fa fa-fw fa-calendar"></i>  Events </a>
         </div>
     
         <div class="bd_l3_nvg_button">
-          <a href="./page-album/album.svelte"><i class="fa fa-fw fa-image"></i> Gallery </a>
+          <a href="./page_gallery.html"><i class="fa fa-fw fa-image"></i> Gallery </a>
         </div>
 
         <div class="bd_l3_nvg_button">
@@ -53,12 +57,45 @@
       </nav>
     </div>
     <!-- primary graphics display area -->
-    <div class="bd_l0_maindisplay">
-  
 
+    <div class="bd_l0_maindisplay">
+      <div class="row"> 
+        <div class="column">
+          <img src="./links/13.jpg" >
+          <img src="./links/11.jpg" >
+          <img src="./links/5.jpg" >
+          <img src="./links/3.jpg" >
+          <img src="./links/4.jpg" >
+          <img src="./links/15.jpg" >
+        </div>
+        <div class="column">
+          <img src="./links/4.jpg" >
+          <img src="./links/5.jpg" >
+          <img src="./links/3.jpg" >
+          <img src="./links/4.jpg" >
+          <img src="./links/11.jpg" >
+          <img src="./links/13.jpg" >
+        </div>
+        <div class="column">
+          <img src="./links/3.jpg" >
+          <img src="./links/4.jpg" >
+          <img src="./links/15.jpg" >
+          <img src="./links/13.jpg" >
+          <img src="./links/4.jpg" >
+          <img src="./links/5.jpg" >
+
+        </div>
+
+      </div>
+      
+      </body>
+      </html>
     </div>
 
+
+    
   </body> 
 
 </html>
 
+<script src="./JS/app_gallery.js" type="module"></script>

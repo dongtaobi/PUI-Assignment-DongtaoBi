@@ -327,16 +327,16 @@ body {
     gap: 5px;
 }
 
-.bd_l3_gallery_container img{
+.bd_l5_gallery_img{
     object-fit: cover;
     vertical-align: top;
-
-    width: 24.5%;
-    max-width: 24%;
-    border: solid white 4px;
-    
-    height: 40%;
     padding-top: 0px;
+
+    width: 24%;
+    height: 40%;
+    max-width: 24%;
+    border: solid white 2px;   
+    border-radius: 10px;
 }
 
 
@@ -413,7 +413,6 @@ body {
 }
 
 .bd_l4_schedule_event_card {
-    
     width: 100%;
     max-width: 600px;
     height: 80px;
@@ -468,7 +467,14 @@ body {
   [class*="bd_l2_content"] {
     width: 100%;
   }
+
+  [class*="bd_l5_gallery_img"] {
+    max-width: 49%;
+    width: 49%;
+    height: 20%;
+  }
 }
+
 
 .med-title {
     background-color: #f8d152;
@@ -509,4 +515,9 @@ a:active {
 .bd_l3_nvg_button:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.25);
+}
+
+.bd_l5_gallery_img:hover{
+    transition: all .5s ease-in-out;
+    transform: scale(2);
 }

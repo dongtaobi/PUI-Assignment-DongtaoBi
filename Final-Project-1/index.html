@@ -1,21 +1,25 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <link rel="stylesheet" href="CSS/style_index.css">
+    
     <!-- import Ubuntu font family from Google API -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <script src="https://kit.fontawesome.com/35d3d9d2ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" 
+    href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <script src="https://kit.fontawesome.com/35d3d9d2ef.js" 
+    crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>HomePage</title>
-
-    <script src="./JS/app_index.js"></script>
+    <title>HomePet | Dashboard</title>
+    <script defer src="./JS/app_index.js"></script>
+    
   </head>
 
   <!-- page body begins here -->
   <body>
-          <!-- Navigation bar with social media icons -->
 
+    <!-- Navigation bar with social media icons -->
     <div class="bd_l0_socialmedia">
      <a href="#" ><i class="fa fa-facebook-official" class = "soc_icons"></i></a>
      <a href="#" ><i class="fa fa-instagram" class = "soc_icons"></i></a>
@@ -23,70 +27,76 @@
      <a href="#" ><i class="fa fa-flickr" class = "soc_icons"></i></a>
      <a href="#" ><i class="fa fa-twitter" class = "soc_icons"></i></a>
      <a href="#" ><i class="fa fa-linkedin" class = "soc_icons"></i></a>
-     </div>
-
-
+    </div>
 
     <!-- navigation bar and header area -->
     <div class="bd_l1_navigation" src="links/nav-bar-img.webp">
 
-      <a class="bd_l2_logobox" href="./index.html">
-        <img class="bd_l2_logobox_logo" src="links/Logo-1.png" alt="image loading..">
+      <a id = "test" class="bd_l2_logobox" href="./index.html">
+        <img class="bd_l2_logobox_logo" 1
+        src="links/Logo-1.png" 
+        alt="Home pet branding logo">
       </a>
     
+      <!-- navigation bar area -->
       <nav class="bd_l2_nvg_bar"> 
-    
-        <a class="bd_l3_nvg_button" href="./index.html" onclick="smoothTransition()">
+        <a class="bd_l3_nvg_button" href="./index.html" 
+        onclick="smoothTransition()">
           <div > <i class="fa fa-fw fa-house"></i>  Dashboard</div> 
         </a>
     
-        <a class="bd_l3_nvg_button" href="./page_events.html" onclick="smoothTransition()">
-          <div > <i class="fa fa-fw fa-calendar"></i>  Events </div>
-        </a>
-    
-        <a class="bd_l3_nvg_button" href="./page_gallery.html" onclick="smoothTransition()">
+        <a class="bd_l3_nvg_button" href="./page-gallery.html" 
+        onclick= "smoothTransition()">
           <div > <i class="fa fa-fw fa-image"></i> Gallery </div>
         </a>
 
-        <nav class="bd_l3_nvg_button" href="./page_documents.html" onclick="smoothTransition()">
+        <a class="bd_l3_nvg_button" href="./page-documents.html" 
+        onclick="smoothTransition()">
           <div > <i class="fa fa-fw fa-calendar"></i>  Documents </div>
         </a>
 
       </a>
     </div>
+
     <!-- primary graphics display area -->
     <div class="bd_l0_maindisplay">
-  
-
 
       <!-- primary content area -->
       <div class="bd_l1_content">
         <div class="bd_l2_content_left">
 
           <div class="bd_l3_statusbox_container">
-            <img class="bd_l4_statusgraphic_container_gif breathing-animation"  src = "links/status-relax.gif" id = "pet_avatar"> </img>
+            <img class="bd_l4_statusgraphic_container_gif breathing-animation"  
+            src = "./links/gallery/19.jpg"  id = "pet_avatar"
+            alt= " feature image of a cute kitten "> 
+           </img>
 
             <div class="bd_l3_statustext_container"> 
               <div style="background-color:#f8d152; font-weight: bold;" 
-              class = "bd_l4_statuscards_card med-title"> <div> STATUS TODAY</div> </div>
+                class = "bd_l4_statuscards_card med-title"> <div> STATUS TODAY</div> 
+              </div>
 
               <div class = "bd_l4_statusgraphic_container_tab">
 
-                <div class = "bd_l5_statustext_box" style="background-color: #437fb7;"> 
+                <div class = "bd_l5_statustext_box"> 
                   <i class="fa-solid fa-glass-water fa-xl"></i> 
-                  <div> Drink </div> <div> 132 ml </div> </div>
+                  <div> Drink </div> <div> 132 ml </div>
+                </div>
 
-                <div class = "bd_l5_statustext_box" style="background-color: #e08655;"> 
+                <div class = "bd_l5_statustext_box" > 
                   <i class="fa-solid fa-bed fa-xl"></i>
-                  <div> Eat </div> <div> 14.9 Oz </div> </div>
+                  <div> Eat </div> <div> 14.9 Oz </div> 
+                </div>
 
-                <div class = "bd_l5_statustext_box" style="background-color: #cdc960;"> 
+                <div class = "bd_l5_statustext_box"> 
                   <i class="fa-solid fa-crow fa-xl"></i>
-                  <div> Playtime </div>  <div> 45 min </div> </div>
-
+                  <div> Active</div>  <div> 45 min </div> 
+                </div>
             </div>
           </div>
 
+          <!-- place holder content for status cards -->
+          <!-- feature to be addressed in future -->
           <div class="bd_l3_statuscards_container"> 
 
             <div 
@@ -97,132 +107,160 @@
             <div class = "bd_l4_statuscards_card">
               <h2>PLAYING</h2>
               <div>1hr 12min</div>
-              
+
             </div>
 
             <div class = "bd_l4_statuscards_card">
               <h2>SLEEPING</h2>
               <div>4hr 12min</div>
-
             </div>
 
 
             <div class = "bd_l4_statuscards_card">
               <h2>RESTROOM</h2>
               <div>11min</div>
-
             </div>
 
 
             <div class = "bd_l4_statuscards_card">
               <h2>DINING</h2>
-              <div>6min</div>
-              
+              <div>6min</div>             
             </div>
 
             <div class = "bd_l4_statuscards_card">
               <h2>SLEEPING</h2>
-              <div>3hr 31min</div>
-              
+              <div>3hr 31min</div>            
             </div>
 
             <div class = "bd_l4_statuscards_card">
               <h2>RESTING</h2>
-              <div>12min</div>
-              
+              <div>12min</div>             
             </div>
 
             <div class = "bd_l4_statuscards_card">
               <h2>DINING</h2>
               <div>18min</div>
-              
             </div>
 
             <div class = "bd_l4_statuscards_card">
               <div>...</div>
               <div></div>
-            
             </div>
 
           </div>
-
-
-
-
+          
         </div>
-
-
-        
       </div>
-
+      
 
       <div class="bd_l2_content_right">
         <div class= "bd_l3_schedule_container">
-          <div class= "bd_l4_schedule_event_card med-title"> <div>UPCOMING EVENTS</div> </div>
+          <!-- events list title bar -->
+          <label class= "bd_l4_schedule_event_card med-title">
+          <div>UPCOMING EVENTS</div>
+          </label>
+          
+          <div id = "events-list" class = "bd_l3_schedule_container_sublist">
 
-          <div class= "bd_l4_schedule_event_card"> 
-            <i class = "fa fa-user-doctor fa-2x"></i>
-            <div>Veterinary Visit</div>
-            <div> 22-09-26</div>
-            <i class="fa fa-bars key-expand"></i>
-            <div  style="display: none">
-              TEST HIDEEN CONTENT
-            </div>
-          </div>
+            <template id = "event_card_template" >
+              <div id = "event-card" class = "bd_l4_schedule_event_card">
+               <!-- card tempalte - event icon -->
+               <i id = "event-icon" class = "fa fa-user-doctor fa-2x"></i>
 
-          <div class= "bd_l4_schedule_event_card" > 
-            <i class = "fa fa-user-doctor fa-2x"></i>
-            <div> Grooming Service</div>
-            <div> 22-10-02</div>
-            <i class="fa fa-bars"></i> 
+               <!-- card tempalte - content part -->
+               <div class= "bd_l5_schedule_event_card_content">
+                 <div class="bd_l5_schedule_event_card_content_top" >
+                   <!-- card tempalte - event title -->
+                   <div id = "event-title">Veterinary Visit</div>
+                   <!-- card tempalte - event date-->
+                   <div id = "event-date"> 22-09-26 </div>
+                 </div>
+                 <!-- card tempalte - event details -->
+                 <div id = "event-details">
+                   Veterinary visit at Greenfield Hospital
+                 </div>
+                </div>
+               <!-- detel btn for removing note -->
+               <div id = "event-delete">
+                 <i  class="fa fa-trash"></i>
+               </div>
+              </div>
+            </template>
           </div>
         
-          <div class= "bd_l4_schedule_event_card"> 
-            <i class = "fa fa-user-doctor fa-2x"></i>
-            <div> Restock Food Supply </div>
-            <div> 22-10-22</div>
-            <i class="fa fa-bars"></i> </div>         
-        </div>
-
-
-        <div class= "bd_l3_schedule_create">
-          <div class = "bd_l4_schedule_create_left">
-            <i id="editor" class = "fa fa-pen-to-square fa-2x "></i>
-          </div>
-
-          <div class = "bd_l4_schedule_create_right" >
-            <div class = "bd_l5_schedule_create_options"> 
-              Add a new event.
+        
+          <div class= "bd_l3_schedule_create">
+            <!-- Event type icon selector -->
+            <div class = "bd_l4_schedule_create_icon" id="eventIcon_selector_tab">
+              <i id="eventIcon_selector" class = "fa fa-pen-to-square fa-2x "></i>
             </div>
-            <div class = "bd_l5_schedule_create_input" ></div>
+            <!-- Event parameters input area -->
+            <div class = "bd_l4_schedule_create_right" >
+              
+              <div class = "bd_l5_schedule_input">
+                <!-- Event title input -->
+                <div class = "bd_l5_schedule_input_top">
+                  <textarea 
+                  id = "event-editor-title"
+                  placeholder="Title of new event.."
+                  maxlength = "32" 
+                  resize = "none" cols="18" rows="1"> </textarea>
+
+                  <!-- Event date input -->
+                  
+                  <input type="date" id="input_date" name="trip-start" 
+                  value="2022-12-08" min="2022-12-08" max="2023-12-31"> 
+                </div>
+
+               <div class = "bd_l5_schedule_input_bot" id = "#">
+                  <!-- Event details input -->
+                  <textarea 
+                    id = "event-editor-details"
+                    placeholder = "Event Details.." 
+                    maxlength = "150" rows = "1"> 
+                  </textarea>
+                </div>
+              </div>
+
+
+
+              <div id = "event-submit-btn">
+                <i class="fa-solid fa-check fa-xl" > </i>
+              </div>
+
+            </div>
           </div>
         </div>
 
         <div class= "bd_l3_gallery_container">
-          <div class= "bd_l4_schedule_event_card med-title"> <div> PHOTO GALLERY </div> </div>
+          <a class= "bd_l4_schedule_event_card med-title"
+          href="./page-gallery.html" > <div> PHOTO GALLERY </div> </a>
           <div>
-            <img class = "bd_l5_gallery_img" src="./links/4.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/5.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/6.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/7.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/8.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/9.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/10.jpg" >
-            <img class = "bd_l5_gallery_img" src="./links/11.jpg" >
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/11.jpg" 
+              alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/2.jpg" 
+            alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/3.jpg" 
+            alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/4.jpg" 
+            alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/5.jpg" 
+            alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/6.jpg" 
+            alt="A picture of a cute kitten">
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/9.jpg"
+            alt="A picture of a cute kitten" >
+            <img class = "bd_l5_gallery_img" src = "./links/gallery/8.jpg" 
+            alt="A picture of a cute kitten">
           </div>
        </div>
-
-
-        
       </div>
-
-
-
-      
-
     </div>
-
   </body> 
+
+  <footer>
+    <div> @ HomePet - best companion for your upcoming errands </div>
+  </footer>
 
 </html>
 

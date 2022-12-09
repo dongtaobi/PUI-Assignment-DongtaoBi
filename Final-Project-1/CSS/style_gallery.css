@@ -1,6 +1,6 @@
 img { transition: all .2s ease-in-out; }
 
-img:hover { transform: scale(2); }
+.bd_l0_maindisplay img:hover { transform: scale(3); }
 
 .row {
   display: flex;
@@ -15,9 +15,12 @@ img:hover { transform: scale(2); }
 }
 
 .column img {
+  animation: slideUp 1s ease-in-out;
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+
+  outline: solid 4px white;
   border-radius: 20px;
 }
 
@@ -26,5 +29,14 @@ img:hover { transform: scale(2); }
   .column {
     flex: 50%;
     max-width: 50%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

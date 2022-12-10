@@ -1,10 +1,11 @@
 
+/* accessibility feature, maginifies PDF documents on hover */
+.pdf-array-container a:hover { 
+    transform: scale(1.75); 
+    transition: all .5s ease-in-out;
+}
 
-
-
-
-
-    
+/* main container of PDF array */
 .pdf-array-container {
     width: 800px;
     max-width: 80%;

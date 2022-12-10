@@ -1,4 +1,5 @@
 
+// console log to report successful link
 console.log("Javascript linked successfully.")
 
 // smoothen transition animation for mobile application
@@ -11,9 +12,7 @@ function smoothTransition() {
     });
 }
 
-
-
-// event icon selections list
+// event icon selections range in a list
 let entryIconIndex = 0;
 const entryIconList = ['fa-user-group', 'fa-cart-shopping', 'fa-user-doctor', 'fa-syringe', 'fa-pen'];
 // console.log(entryIconList)
@@ -37,7 +36,7 @@ eventIconTab.addEventListener('click', () => {
   updateEventEntryIcon();
 });
 
-
+// event class contructor by four attributes
 class Event {
   constructor(icon, title, date, details) {
     this.eventIcon = icon;

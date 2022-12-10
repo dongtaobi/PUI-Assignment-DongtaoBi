@@ -47,76 +47,71 @@ class Event {
   }
 }
 
-
+// events objects as a data set 
 const eventsList = new Set();
+
+// function to add new event to existing set
 function createNewEvent(icon, title, date, details) {
   const event = new Event(icon, title, date, details);
   eventsList.add(event);
   return event;
 }
 
-
+// function to update events in data set
 function updateElement(notecard) {
-  // get the HTML elements that need updating
+
   const eventIconElement = notecard.element.querySelector('#event-icon');
   const eventTitleElement = notecard.element.querySelector('#event-title');
   const eventDateElement = notecard.element.querySelector('#event-date');
   const eventDetailsElement = notecard.element.querySelector('#event-details');
   
-  // copy our notecard content over to the corresponding HTML elements
   eventIconElement.className = notecard.eventIcon;
   eventTitleElement.innerText = notecard.eventTitle;
   eventDateElement.innerText = notecard.eventDate;
   eventDetailsElement.innerText = notecard.eventDetails;
 }
 
-
-
+// function to delete presented event
 function deleteEvent(event) {
-  // remove the notecard DOM object from the UI
-  event.element.remove();
-  // remove the actual Notecard object from our set of notecards
+  event.element.remove();  
   eventsList.delete(event);
 }
 
-
+// cloning template to create new element in HTML from DOM
 function createElement(event) {
-  // make a clone of the notecard template
+  // capture event card template from HTML
   const template = document.querySelector('#event_card_template');
   console.log("template is:", template)
   console.log("template.content:", template.content)
 
+  //clone template
   const clone = template.content.cloneNode(true);
   console.log("clone = ", clone);
   
-  // connect this clone to our notecard.element
-  // from this point we only need to refer to notecard.element
   event.element = null;
   event.element = clone.querySelector('#event-card');
   console.log("event.element is:", event.element)
 
+  // delete function listener in connection to event template 
   const btnDelete = event.element.querySelector('#event-delete');
   console.log(btnDelete);
   btnDelete.addEventListener('click', () => {
     deleteEvent(event);
   });
   
-  // add the notecard clone to the DOM
-  // find the notecard parent (#notecard-list) and add our notecard as its child
+  // add created new event to exisiting list, in the last place
   const eventsListElement = document.querySelector('#events-list');
   eventsListElement.append(event.element);
-  
-  // populate the notecard clone with the actual notecard content
   updateElement(event);
 }
 
-
+// function to submit event from event editor
 function submitEvent() {
   let eventIcon = document.querySelector('#eventIcon_selector');
   let icon = eventIcon.className;
   console.log("editor icon:", icon);
 
-
+  // relate event attributes to params captured in editor
   let eventTitle = document.querySelector('#event-editor-title');
   let title = eventTitle.value;
   console.log("editor title:", title);
@@ -130,20 +125,21 @@ function submitEvent() {
   let details = eventDetails.value;
   console.log("editor details:", details);
 
-  // create note cardobject and add to notecard set
+
   let event = createNewEvent(icon, title, date, details);
 
-  // add the notecard to DOM
+  // add the event to DOM
   createElement(event);
   console.log("Submitted event!")
 }
 
-
+// event listener for 'submit event' botton
 const btnSubmitEvent = document.querySelector('#event-submit-btn');
 btnSubmitEvent.addEventListener('click', () => {
   submitEvent();
 });
 
+// manually created events in the DOM
 const newEvent1 = createNewEvent(
 'fa fa-user-doctor fa-xl', 
 'Veterinary Visit', 

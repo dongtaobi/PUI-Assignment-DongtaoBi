@@ -1,4 +1,4 @@
-/* image display aniation */
+/* image display animation */
 img { transition: all .2s ease-in-out; }
 
 @keyframes slideUp {
@@ -12,6 +12,7 @@ img { transition: all .2s ease-in-out; }
 
 /* generic formatting refernce: w3school.com */
 .bd_l0_maindisplay img:hover { transform: scale(3); }
+
 /* column and row styling for responsive display */
 .row {
   display: flex;

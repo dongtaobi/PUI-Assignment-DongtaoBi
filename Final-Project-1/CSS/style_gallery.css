@@ -1,7 +1,18 @@
+/* image display aniation */
 img { transition: all .2s ease-in-out; }
 
-.bd_l0_maindisplay img:hover { transform: scale(3); }
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+/* generic formatting refernce: w3school.com */
+.bd_l0_maindisplay img:hover { transform: scale(3); }
+/* column and row styling for responsive display */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -24,19 +35,10 @@ img { transition: all .2s ease-in-out; }
   border-radius: 20px;
 }
 
-/* For mobile phones: */
+/* formatting adjustment mobile phones: */
 @media screen and (max-width: 1200px) {
   .column {
     flex: 50%;
     max-width: 50%;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
   }
 }

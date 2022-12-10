@@ -1,6 +1,5 @@
 
-/* remove link text color */
-
+/* overall sizing reference*/
 * {
     box-sizing: border-box;
 }
@@ -17,8 +16,9 @@ a:hover {
     text-decoration:none; 
 }
 
-nav a:active {
-    background-color:#f8d152;
+nav{
+    font-weight: bold;
+    font-size: 28px;
 }
 
 
@@ -45,18 +45,6 @@ textarea:focus{
     outline: solid 2px rgb(52, 52, 52);
     background-color: rgb(216, 216, 216);
 }
-
-/* intermedia level title settings */
-.med-title {
-    background-color: #f8d152;
-    border-radius: 30px 0 30px 30px;
-    font-size: 28px;
-    height: 55px;
-    font-weight: bolder;
-    letter-spacing: px;
-    color: rgb(50,50,50);
-}
-
 
 /* footer appearance settings */
 footer {
@@ -595,7 +583,7 @@ body {
 }
 
 
-/* responsive design settings */
+/* responsive design*/
 @media only screen and (max-width: 1200px) {
   /* For mobile phones: */
   [class*="bd_l2_content"] {
@@ -609,7 +597,18 @@ body {
   }
 }
 
-/* generic animation dynamics */
+
+.med-title {
+    background-color: #f8d152;
+    border-radius: 30px 0 30px 30px;
+    font-size: 28px;
+    height: 55px;
+    font-weight: bolder;
+    letter-spacing: px;
+    color: rgb(50,50,50);
+}
+
+
 .breathing-animation { animation: breathe 2s ease-in-out infinite; }
   
 @keyframes breathe {
@@ -636,6 +635,7 @@ body {
 
 
 /* animation to enlarge editor icon when hovered */
+
 #editor:hover { 
     transition: all .2s ease-in-out;
     transform: scale(1.3); 

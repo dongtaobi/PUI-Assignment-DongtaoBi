@@ -62,7 +62,7 @@ footer {
     border-radius: 0 0 25px 25px;
 
     font-size: 18px;
-    color: #666666;
+    color: rgb(50,50,50);
 
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(50,50,50);
     color: white;
     display: flex;
     gap: 60px;
@@ -453,7 +453,7 @@ body {
 
     font-size: 16px;
     padding-left: 10px;
-    caret-color: grey;
+    caret-color: rgb(50,50,50);
     
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -485,10 +485,10 @@ body {
     height: 32px;
     border-radius: 20px;
     width: 100%;
-    caret-color: grey;
+    caret-color: rgb(50,50,50);
 
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif black;
+    font-family: Arial, Helvetica, sans-serif rgb(50,50,50);
     text-indent: 10px;
     caret-color: transparent;
 
@@ -500,10 +500,10 @@ body {
     max-width: 100%;
     width: 100%;
     max-width: 600px;
-    color: white;
+    color: rgb(50,50,50);
     height: 40px;
 
-    background-color:#83aa5b;
+    background-color:#8cac6b;
     align-self: center;
     border-radius: 0px;
     box-sizing:border-box;
@@ -523,9 +523,9 @@ body {
     max-width: 600px;
     height: 80px;
 
-    color: white;
+    color: rgb(50,50,50);
     font-size: 18px;
-    background-color: #4c83af;
+    background-color: #90b0ca;
     border-radius: 40px 0 40px 40px ;
 
 
@@ -575,7 +575,7 @@ body {
     
     height: 140px;
     width: 31%;
-    color: white;
+    color: rgb(50,50,50);
 
     padding-top: 35px;
     padding-bottom: 20px;
@@ -619,7 +619,7 @@ body {
     height: 55px;
     font-weight: bolder;
     letter-spacing: px;
-    color: #5c5c5c;
+    color: rgb(50,50,50);
 }
 
 
@@ -646,9 +646,6 @@ body {
     }
 }
 
-a:target {
-    background-color: red;
-}
 
 
 /* animation to enlarge editor icon when hovered */

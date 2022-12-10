@@ -6,9 +6,14 @@
 }
   
 
+
 a {
     color: rgb(78, 78, 78);
     text-decoration: none;
+}
+
+.bd_l0_socialmedia a {
+    color: white;
 }
 
 a:hover {
